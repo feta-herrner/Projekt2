@@ -49,6 +49,9 @@ Das Ausschneiden ist ziemlich anstrengende Kleinstarbeit, die unser Photoshop-Ex
 ![test](https://github.com/favicon.ico | width=48)
 ![test](https://github.com/favicon.ico =24x48)
 
+![test](https://github.com/favicon.ico){:height="24px" width="48px"}
+
+<img src="https://user-images.githubusercontent.com/54102146/68995786-c7960800-0891-11ea-8c69-c4c5350d9af4.png" width="48">
 
 
 #### 21. November <a name="21.11"></a>
