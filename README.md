@@ -47,6 +47,7 @@ Das Ausschneiden ist ziemlich anstrengende Kleinstarbeit, die unser Photoshop-Ex
 
 ![SchifiXX](https://user-images.githubusercontent.com/54102146/68995786-c7960800-0891-11ea-8c69-c4c5350d9af4.png =250x250)
 ![test](https://github.com/favicon.ico | width=48)
+![test](https://github.com/favicon.ico =24x48)
 
 
 
