@@ -46,7 +46,7 @@ Danach haben wir für unser Raumschiff noch ein Bild aus dem Internet ausgewähl
 Das Ausschneiden ist ziemlich anstrengende Kleinstarbeit, die unser Photoshop-Experte Felix Zuhause pflichtbewusst beendet hat ;).
 
 ![SchifiXX](https://user-images.githubusercontent.com/54102146/68995786-c7960800-0891-11ea-8c69-c4c5350d9af4.png =250x250)
-
+![test](https://github.com/favicon.ico | width=48)
 
 
 
