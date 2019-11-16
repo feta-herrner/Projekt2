@@ -17,6 +17,15 @@
 
 </details>
   
+  <details>
+  <summary>Dezember</summary>
+  
+##### [03.12.19](#03.12)
+##### [04.12.19](#04.12)
+##### [05.12.19](#05.12)
+
+
+</details>
   
   #### 19. November <a name="19.11"></a>
   * 
