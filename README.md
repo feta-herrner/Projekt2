@@ -1,7 +1,7 @@
 # Projekt2: Stundenblog
 
 ### Übersicht
-<detials>
+<details>
   <summary>November</sumary>
   
   ##### [19.11.19](#1911)
