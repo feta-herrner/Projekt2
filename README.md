@@ -71,7 +71,7 @@ wie zu sehen, erscheinen die Kugeln jetzt sehr schnell nacheinander, was wir mit
 <img width="500" alt="Bildschirmfoto 2019-11-16 um 18 03 00" src="https://user-images.githubusercontent.com/54102146/68996515-78ed6b80-089b-11ea-9277-0a1a29d91897.png">
 
 Durch ändern der "shootingCooldown" Variable können wir auch die Schussgeschwindigkeit anpassen.
-
+Wie im Bild oben zu sehen, bestand außerdem das Problem, dass die Projektile an der oberen Grenze der Welt "hängen" bleiben. Diesem Fehler wollen wir in der nächsten Informatikstunde nachgehen.
 #### 28.November <a name="28.11"></a>
 
 
