@@ -45,7 +45,7 @@ Wir haben dann die `CheckKeys()` Methode für diese Mutterkalsse eingeführt, we
 Danach haben wir für unser Raumschiff noch ein Bild aus dem Internet ausgewählt, in Photoshop die Ränder von diesem entfernt und es als Bild für unser Raumschiff gesetzt, welches wir zu Ehren unseres alten Freundes "Fischi von Klå" Schifi getauft haben.
 Das Ausschneiden ist ziemlich anstrengende Kleinstarbeit, die unser Photoshop-Experte Felix Zuhause pflichtbewusst beendet hat ;).
 
-![SchifiXX](https://user-images.githubusercontent.com/54102146/68995786-c7960800-0891-11ea-8c69-c4c5350d9af4.png)
+![SchifiXX](https://user-images.githubusercontent.com/54102146/68995786-c7960800-0891-11ea-8c69-c4c5350d9af4.png =250x250)
 
 
 
