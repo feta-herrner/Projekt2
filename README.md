@@ -52,7 +52,10 @@ Das Ausschneiden ist ziemlich anstrengende Kleinstarbeit, die unser Photoshop-Ex
 Die Stunde am 21. ist ausgefallen: Heute haben wir unser Vorabi in Physik geschrieben...
 Den rest des Tages haben wir uns frei genommen ;).
 
-#### 26. November <a name="26.11"></a>
+#### 26. November <a name="26.11"></a> 
+  Heute war dann das Vorabi in Mathe dran. Das heißt: Das Wochenende gehörte Mathe, genau wie die Informatikstunde heute, die ist nämlich ausgefallen. Wir sind ziemlich geschafft vom Lernen, freuen uns aber trotzdem auf Info morgen :).
+
+#### 27. November <a name="27.11"></a>
 Heute haben wir zu Beginn der Stunde erstmal ein paar Minütchen rumgesucht, wie man in Github Bilder skaliert. Das hatten wir schon beim letzten Projekt versucht, waren dann aber gescheitert und haben uns das Problem aus Zeitgründen für später aufgehoben. Die Lösung war dann eine relativ einfache und bestand bei uns darin, HTML-Code zu verwenden, in welchem man die Weite ganz einfach nach dem Bild mit dem "width" Anhang auswählen kann.
 Unser Schifi war bisher etwas groß (siehe unten), weshalb wir es mit einer Zeile Code, die wir schon aus dem letzten Projekt kannten in seinem Konstruktor auf die richtige Größe skalieren lassen.
 
@@ -66,5 +69,9 @@ Diese Kugel soll nun vom Schifi-Raumschiff geschossen werden. Wir haben das so u
 wie zu sehen, erscheinen die Kugeln jetzt sehr schnell nacheinander, was wir mit einer if Schleife angepasst haben, die einen kleinen cooldown hinzufügt. Das Prinzip solcher if-Schleifen war uns noch gut aus unserem [ersten Projekt](https://github.com/feta-herrner/Fischi-von-Kla) geläufig.
 
 <img width="500" alt="Bildschirmfoto 2019-11-16 um 18 03 00" src="https://user-images.githubusercontent.com/54102146/68996515-78ed6b80-089b-11ea-9277-0a1a29d91897.png">
+
+Durch ändern der "shootingCooldown" Variable können wir auch die Schussgeschwindigkeit anpassen.
+
+#### 28.November <a name="28.11"></a>
 
 
