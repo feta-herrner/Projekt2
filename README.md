@@ -62,7 +62,7 @@ Unser Schifi war bisher etwas groß (siehe unten), weshalb wir es mit einer Zeil
 <img width="370" alt="Bildschirmfoto 2019-11-16 um 17 11 38" src="https://user-images.githubusercontent.com/54102146/68995972-32e0d980-0894-11ea-88eb-9a9f9a3fc2c9.png"> <img width="370" alt="Bildschirmfoto 2019-11-16 um 17 15 41" src="https://user-images.githubusercontent.com/54102146/68996017-c61a0f00-0894-11ea-8a8c-baa379d7cd78.png">
 
 Als nächstes wollten wir für unser Schifi eine "schießen" Methode programmieren. Damit überhaupt etwas geschossen werden kann, haben wir eine "SchnellfeuerKugel"-Klasse erstellt. Als bild haben wir schlicht einen roten Kreis genommen, den wir, wie auch das Raumschiff in seinem Konstruktor skalieren lassen. 
-Diese Kugel soll nun vom Schifi-Raumschiff geschossen werden. Wir haben das so umgesetzt, dass immer, wenn die Leertase gedrückt wird, in der act Methode des Schifis eine neue Kugel mit der Position des Schifis erstellt wird. Diese Kugel bewegt sich wiederum in ihrer act Methode in Schussrichtung.
+Diese Kugel soll nun vom Schifi-Raumschiff geschossen werden. Wir haben das so umgesetzt, dass immer, wenn die Leertaste gedrückt wird, in der act Methode des Schifis eine neue Kugel mit der Position des Schifis erstellt wird. Diese Kugel bewegt sich wiederum in ihrer act Methode in Schussrichtung.
 
 ![DASHIER](https://user-images.githubusercontent.com/54102146/68996456-979f3280-089a-11ea-9df7-7f7b6340b68a.png)
 
