@@ -64,7 +64,7 @@ Unser Schifi war bisher etwas groß (siehe unten), weshalb wir es mit einer Zeil
 Als nächstes wollten wir für unser Schifi eine "schießen" Methode programmieren. Damit überhaupt etwas geschossen werden kann, haben wir eine "SchnellfeuerKugel"-Klasse erstellt. Als bild haben wir schlicht einen roten Kreis genommen, den wir, wie auch das Raumschiff in seinem Konstruktor skalieren lassen. 
 Diese Kugel soll nun vom Schifi-Raumschiff geschossen werden. Wir haben das so umgesetzt, dass immer, wenn die Leertase gedrückt wird, in der act Methode des Schifis eine neue Kugel mit der Position des Schifis erstellt wird. Diese Kugel bewegt sich wiederum in ihrer act Methode in Schussrichtung.
 
-![DASHEIR](https://user-images.githubusercontent.com/54102146/68996456-979f3280-089a-11ea-9df7-7f7b6340b68a.png)
+![DASHIER](https://user-images.githubusercontent.com/54102146/68996456-979f3280-089a-11ea-9df7-7f7b6340b68a.png)
 
 wie zu sehen, erscheinen die Kugeln jetzt sehr schnell nacheinander, was wir mit einer if Schleife angepasst haben, die einen kleinen cooldown hinzufügt. Das Prinzip solcher if-Schleifen war uns noch gut aus unserem [ersten Projekt](https://github.com/feta-herrner/Fischi-von-Kla) geläufig.
 
@@ -73,5 +73,8 @@ wie zu sehen, erscheinen die Kugeln jetzt sehr schnell nacheinander, was wir mit
 Durch ändern der "shootingCooldown" Variable können wir auch die Schussgeschwindigkeit anpassen.
 Wie im Bild oben zu sehen, bestand außerdem das Problem, dass die Projektile an der oberen Grenze der Welt "hängen" bleiben. Diesem Fehler wollen wir in der nächsten Informatikstunde nachgehen.
 #### 28.November <a name="28.11"></a>
+
+#### 10.Dezember <a name="10.12"></a>
+erster Arbeitstag!
 
 
