@@ -1,7 +1,6 @@
 # Projekt2: Stundenblog
 
 ### Übersicht
-<details>
 
   
   <details>
