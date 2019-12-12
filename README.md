@@ -10,6 +10,9 @@
 ##### [10.12.19](#10.12)
 ##### [11.12.19](#11.12)
 ##### [12.12.19](#12.12)
+##### [17.12.19](#17.12)
+##### [18.12.19](#18.12)
+##### [19.12.19](#19.12)
 
 
 </details>
@@ -54,4 +57,10 @@ Durch ändern der "shootingCooldown" Variable können wir auch die Schussgeschwi
 Wie im Bild oben zu sehen, bestand außerdem das Problem, dass die Projektile an der oberen Grenze der Welt "hängen" bleiben. Diesem Fehler wollen wir in der nächsten Informatikstunde nachgehen.
 
 
+#### 17. Dezember <a name="17.12"></a>
 
+
+#### 18. Dezember <a name="18.12"></a>
+
+
+#### 19. Dezember <a name="19.12"></a>
