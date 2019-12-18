@@ -61,6 +61,6 @@ Am heutigen Tage ist der Informatikunterricht leider ausgefallen :(
 
 
 #### 18. Dezember <a name="18.12"></a>
-Aufgrund dessen, dass Max ein [ähnliches Projekt]() im vergangenen Halbjahr gemacht hat, haben wir nun beschlossen, wie beim letzten Mal, unser Projekt zu verwerfen und ein neues zu beginnen. Natürlich werden wir fortlaufend mit Greenfoot arbeiten. 
+Aufgrund dessen, dass Max ein ähnliches Projekt im vergangenen Halbjahr gemacht hat, haben wir nun beschlossen, wie beim letzten Mal, unser Projekt zu verwerfen und ein neues zu beginnen. Natürlich werden wir fortlaufend mit Greenfoot arbeiten. 
 
 #### 19. Dezember <a name="19.12"></a>
