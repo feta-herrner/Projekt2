@@ -19,11 +19,12 @@
   #### 10. Dezember<a name="10.12"></a>
  Die Abgabe des Fischi Projekts ist schon einen Monat her. Schweren Herzens haben wir nun beschlossen, die Zeiten mit Fischi, so schön sie auch waren, hinter uns zu lassen und uns auf ein neues Abenteuer in Greenfoot zu begeben. Unser "Spaghetti-Code" in Fischi hat uns teilweise zu schaffen gemacht, weshalb wir beschlossen haben, zu versuchen, dieses mal von Grund auf strukturierter vorzugehen.
   Zuallererst musste natürlich erstmal eine Idee für ein neues Projekt her. Ein Spiel haben wir ja schon mit einigem Erfolg programmiert, weshalb sich augenscheinlich nun zwei Wege für uns darboten:
-  - unser angeeignetes Wissen über diese Art Spiel nutzen, um ein ähnliches/ fortgschritteneres Spiel zu erschaffen
-  - Ein anderes Projekt in Greenfoot umsetzen
-  Da wir uns in Greenfoot gut eingelebt haben, wollten wir diese Plattform aber zunächst eher ungern wieder verlassen.
-  Diese schwere Entscheidung haben wir uns zusammen mit ein paar gänzlich anderen Ideen (wie zum Beipsiel auch wieder Arduino, auch wenn wir vor diesem nach unserer ersten Erfahrung noch Respekt haben...) und auch "Snap!" mit nach Hause genommen. 
-  Außerdem haben wir uns heute im Laufe der Stunde ein wenig im Unterrichtsraum umgesehen. Wir holten uns Meinungen unserer Mitschüler bezüglich ihrer Erfahrungen. Die Projekte wurden uns bereits einige Wochen vorher vorgestellt.
+Unser angeeignetes Wissen über diese Art Spiel nutzen, um ein ähnliches/ fortgschritteneres Spiel zu erschaffen oder ein anderes Projekt in Greenfoot umsetzen.
+
+Da wir uns in Greenfoot gut eingelebt haben, wollten wir diese Plattform aber zunächst eher ungern wieder verlassen.
+Diese schwere Entscheidung haben wir uns zusammen mit ein paar gänzlich anderen Ideen (wie zum Beipsiel auch wieder Arduino, auch wenn wir vor diesem nach unserer ersten Erfahrung noch Respekt haben...) und auch "Snap!" mit nach Hause genommen. 
+Außerdem haben wir uns heute im Laufe der Stunde ein wenig im Unterrichtsraum umgesehen. Wir holten uns Meinungen unserer Mitschüler bezüglich ihrer Erfahrungen. Die Projekte wurden uns bereits einige Wochen vorher vorgestellt.
+
 
 #### 11. Dezember <a name="11.12"></a>
 Heute haben wir mit unserem neuen Greenfoot Projekt begonnen. Da wir im letzten Alauf zum Ende hin etwas unter Zeitdruck geraten sind, haben wir uns vorgenommen, die gleichen Fehler dieses Mal nicht zu machen und von Anfang an mit etwas mehr Biss an unser Projekt ranzugehen.
@@ -48,7 +49,7 @@ Diese Kugel soll nun vom Schifi-Raumschiff geschossen werden. Wir haben das so u
 
 ![DASHIER](https://user-images.githubusercontent.com/54102146/68996456-979f3280-089a-11ea-9df7-7f7b6340b68a.png)
 
-Wie hier zu sehen, erscheinen die Kugeln jetzt sehr schnell nacheinander, was wir mit einer "If" Schleife angepasst haben, die einen kleinen cooldown hinzufügt. Das Prinzip solcher "If" Schleifen war uns noch gut aus unserem [ersten Projekt](https://github.com/feta-herrner/Fischi-von-Kla) geläufig.
+Wie hier zu sehen, erscheinen die Kugeln jetzt sehr schnell nacheinander, was wir mit einer If Schleife angepasst haben, die einen kleinen cooldown hinzufügt. Das Prinzip solcher "If" Schleifen war uns noch gut aus unserem [ersten Projekt](https://github.com/feta-herrner/Fischi-von-Kla) geläufig.
 
 <img width="500" alt="Bildschirmfoto 2019-11-16 um 18 03 00" src="https://user-images.githubusercontent.com/54102146/68996515-78ed6b80-089b-11ea-9277-0a1a29d91897.png">
 
@@ -63,8 +64,9 @@ Am heutigen Tage ist der Informatikunterricht leider ausgefallen :(
 #### 18. Dezember <a name="18.12"></a>
 Aufgrund dessen, dass Max ein ähnliches Projekt im vergangenen Halbjahr gemacht hat, haben wir nun beschlossen, wie beim letzten Mal, unser Projekt zu verwerfen und ein neues zu beginnen. Natürlich werden wir fortlaufend mit Greenfoot arbeiten. 
 
+
 #### 19. Dezember <a name="19.12"></a>
-Da Felix heute leider krank war, habe ich alleine angefangen, nach neuen Projektideen zu suchen. Ein Vorschlag aus der letzten Stunde war, ein Schiife-versenken-Spiel mit Greenfoot zu entwerfen. Da dieses Spiel sehr populär ist, habe ich zuerst im Internet nach bereits vorliegenden Codes gesucht.
+Da Felix heute leider krank war, habe ich alleine angefangen, nach neuen Projektideen zu suchen. Ein Vorschlag aus der letzten Stunde war, ein Schiife-versenken-Spiel mit Greenfoot zu entwerfen. Da dieses Spiel sehr populär ist, habe ich zuerst im Internet nach bereits vorliegenden Codes gesucht. In den Weihnachtsferien werden wir dann spezifischere Schritte vornehmen.
 
 https://www.java-forum.org/thema/grundgeruest-fuer-schiffe-versenken.13498/
 
