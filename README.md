@@ -64,3 +64,4 @@ Am heutigen Tage ist der Informatikunterricht leider ausgefallen :(
 Aufgrund dessen, dass Max ein ähnliches Projekt im vergangenen Halbjahr gemacht hat, haben wir nun beschlossen, wie beim letzten Mal, unser Projekt zu verwerfen und ein neues zu beginnen. Natürlich werden wir fortlaufend mit Greenfoot arbeiten. 
 
 #### 19. Dezember <a name="19.12"></a>
+Da Felix heute leider krank war, habe ich alleine angefangen, nach neuen Projektideen zu suchen. Ein Vorschlag aus der letzten Stunde war, ein Schiife-versenken-Spiel mit Greenfoot zu entwerfen. Da dieses Spiel sehr populär ist, habe ich zuerst im Internet nach bereits vorliegenden Codes gesucht.
