@@ -67,4 +67,5 @@ Aufgrund dessen, dass Max ein ähnliches Projekt im vergangenen Halbjahr gemacht
 Da Felix heute leider krank war, habe ich alleine angefangen, nach neuen Projektideen zu suchen. Ein Vorschlag aus der letzten Stunde war, ein Schiife-versenken-Spiel mit Greenfoot zu entwerfen. Da dieses Spiel sehr populär ist, habe ich zuerst im Internet nach bereits vorliegenden Codes gesucht.
 
 https://www.java-forum.org/thema/grundgeruest-fuer-schiffe-versenken.13498/
+
 https://unterrichten.zum.de/wiki/Java/Schiffeversenken
