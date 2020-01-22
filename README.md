@@ -71,3 +71,21 @@ Da Felix heute leider krank war, habe ich alleine angefangen, nach neuen Projekt
 https://www.java-forum.org/thema/grundgeruest-fuer-schiffe-versenken.13498/
 
 https://unterrichten.zum.de/wiki/Java/Schiffeversenken
+
+#### 14. Januar <a name="14.01"></a>
+Leider konnten wir beide heute nicht am Informatikunterricht teilnehmen, weil wir aufgrund der Schulrunde von "Jugend debattiert" verhindert waren.
+
+#### 15. Januar <a name="15.01"></a>
+Überraschenderweise haben wir unsere Projektidee noxh nicht über den Haufen geworfen!
+Allerdings haben wir sie etwas erweitert: Je nach dem, wie es die Zeit ermöglicht, möchten wir mehrere Minispiele für 2 Personen erstellen. Diese hat man im Überblick auf einer Seite und kann dann eines auswählen, das man spielen möchte. Nach Abschluss kommt man dann wieder auf die Übersicht. 
+Aus dem Gespräch mit Herrn Buhl hat sich die Struktur der Spiele ergeben; wir werden uns nun mehr auf die Objektklassen konzentrieren und nicht auf die einzelnen Actors. Dazu ziehen wir das Buch "Einführung in Java mit Greenfoot" zu Hilfe.
+
+#### 16. Januar <a name="16.01"></a>
+
+
+
+#### 21. Januar <a name="21.01"></a>
+Am heutigen Tage war die gesamte Klasse 12g im DESY in Hamburg. Da Teilchenbeschleunigung zwar ein sehr spannender Bereich der Physik ist, der Ausflug allerdings nicht optimal bezüglich der neuen Kenntnisgewinnung gestaltet war, mussten wir den Infounterricht schmerzlich vermissen.
+
+#### 22. Januar <a name="22.01"></a>
+Diese Stunde füllten wir mit dem Kapitel xxx aus der Greenfoot-Lektüre. Wir lernten xxx und werden morgen versuchen dieses Wissen umzusetzen.
