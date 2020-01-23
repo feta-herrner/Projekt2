@@ -93,5 +93,5 @@ Diese Stunde füllten wir mit dem Kapitel xxx aus der Greenfoot-Lektüre. Wir le
 #### 23. Januar <a name="23.01"></a>
 Um ein Grundgerüst für unser erstes Spiel "4 gewinnt" zu errichten, haben wir MyWorld so programmiert, dass zu Beginn 6x6 leere Felder erscheinen. Diese haben wir selbst mit Gimp erstellt. 
 
-https://github.com/feta-herrner/Projekt2/issues/1#issuecomment-577589391
+
 
