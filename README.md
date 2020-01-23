@@ -89,3 +89,6 @@ Am heutigen Tage war die gesamte Klasse 12g im DESY in Hamburg. Da Teilchenbesch
 
 #### 22. Januar <a name="22.01"></a>
 Diese Stunde füllten wir mit dem Kapitel xxx aus der Greenfoot-Lektüre. Wir lernten xxx und werden morgen versuchen dieses Wissen umzusetzen.
+
+#### 23. Januar <a name="23.01"></a>
+Um ein Grundgerüst für unser erstes Spiel "4 gewinnt" zu errichten, haben wir MyWorld so programmiert, dass zu Beginn 6x6 leere Felder erscheinen. Diese haben wir selbst mit Gimp erstellt.
