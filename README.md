@@ -13,6 +13,16 @@
 ##### [18.12.19](#18.12)
 ##### [19.12.19](#19.12)
 
+  <details>
+  <summary>Januar</summary>
+##### [14.01.20](#14.01)  
+##### [15.01.20](#15.01)  
+##### [16.01.20](#16.01)
+##### [21.01.20](#21.01)
+##### [22.01.20](#22.01)
+##### [23.01.20](#23.01)
+##### [28.01.20](#28.01)
+  
 
 </details>
   
@@ -94,4 +104,6 @@ Diese Stunde füllten wir mit dem Kapitel xxx aus der Greenfoot-Lektüre. Wir le
 Um ein Grundgerüst für unser erstes Spiel "4 gewinnt" zu errichten, haben wir MyWorld so programmiert, dass zu Beginn 6x6 leere Felder erscheinen. Diese haben wir selbst mit Gimp erstellt. 
 
 ![Spielfeld4](https://user-images.githubusercontent.com/54102146/72970640-5cecd580-3dc8-11ea-9152-ad435fcb31c0.PNG)
+
+#### 28. Januar <a name="28.01"></a>
 
