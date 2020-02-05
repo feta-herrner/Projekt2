@@ -107,5 +107,16 @@ Um ein Grundgerüst für unser erstes Spiel "4 gewinnt" zu errichten, haben wir 
 
 ![Spielfeld4](https://user-images.githubusercontent.com/54102146/72970640-5cecd580-3dc8-11ea-9152-ad435fcb31c0.PNG)
 
-#### 28. Januar <a name="28.01"></a>
+####  28. Januar <a name="28.01"></a>
+
+
+
+####  05. Februar <a name="05.02"></a>
+
+
+
+
+
+
+
 
