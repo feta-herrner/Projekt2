@@ -108,15 +108,18 @@ Um ein Grundgerüst für unser erstes Spiel "4 gewinnt" zu errichten, haben wir 
 ![Spielfeld4](https://user-images.githubusercontent.com/54102146/72970640-5cecd580-3dc8-11ea-9152-ad435fcb31c0.PNG)
 
 ####  28. Januar <a name="28.01"></a>
+Natürlich brauchen wir auch Spieler, die wir in einer Actorklasse definiert haben. Als Bild setzten wir ein mal einen blauen Kreis ein, den wir bei Gimp ausgeschnitten haben, und für den anderen ein grünes Kreuz.
+Dies hat uns leider mehr Zeit als erwartet gekostet, doch am Ende haben wir 2 sehr schöne Ergebnisse erhalten.
+
+BILD1, BILD2
 
 
 
 ####  05. Februar <a name="05.02"></a>
+Damit die beiden immer abwechselnd am Zuge sind, setzten wir einen Counter ein, der die Spielzüge zählt. Die geraden Zahlen stehen für den blauen Kreis und die ungeraden für das grüne Kreuz.
+Erst hatten wir ein paar Probleme. Der Counter wurde nicht erhöht, was dazu führte, dass immer nur der blaue Kreis seinen Zug setzen durfte. Die Problematik lag darin, dass wir in der World die Felder alle einzeln definiert haben, weshalb der Counter sich nur auf je ein Feld bezog und darum nicht funktioniert hat. 
+Herr Buhl konnte uns glücklicherweise weiterhelfen. Nach langem Suchen konnte er uns erklären, dass wir ein "Static" vor den Code setzen müssen, um die Felder als eine Kategorie abzurufen.
 
 
-
-
-
-
-
+BILD
 
