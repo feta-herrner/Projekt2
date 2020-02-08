@@ -100,7 +100,10 @@ Aus dem Gespräch mit Herrn Buhl hat sich die Struktur der Spiele ergeben; wir w
 Am heutigen Tage war die gesamte Klasse 12g im DESY in Hamburg. Da Teilchenbeschleunigung zwar ein sehr spannender Bereich der Physik ist, der Ausflug allerdings nicht optimal bezüglich der neuen Kenntnisgewinnung gestaltet war, mussten wir den Infounterricht schmerzlich vermissen.
 
 #### 22. Januar <a name="22.01"></a>
-Diese Stunde füllten wir mit dem Kapitel xxx aus der Greenfoot-Lektüre. Wir lernten xxx und werden morgen versuchen dieses Wissen umzusetzen.
+((Diese Stunde füllten wir mit dem Kapitel xxx aus der Greenfoot-Lektüre. Wir lernten xxx und werden morgen versuchen dieses Wissen umzusetzen.))
+
+--> würde lieber was schreiben, was stimmt, haben doch genug material von Sachen die wir/ich zuhause gemacht haben, siehe google docs.
+und jaja das ist neu i know, aber ist doch egal jetzt is es ja da ;D
 
 #### 23. Januar <a name="23.01"></a>
 Um ein Grundgerüst für unser erstes Spiel "4 gewinnt" zu errichten, haben wir MyWorld so programmiert, dass zu Beginn 6x6 leere Felder erscheinen. Diese haben wir selbst mit Gimp erstellt. 
