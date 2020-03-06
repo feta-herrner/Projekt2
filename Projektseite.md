@@ -2,13 +2,13 @@
 
 ## Übersicht:
 <details>
-  - [Einführung] (#einführung)
-  - [Idee] (#idee)
-  - [Code] (#code)
-  - [MyWorld] (#myworld)
+  - [Einführung](#einführung)
+  - [Idee](#idee)
+  - [Code](#code)
+  - [MyWorld](#myworld)
   - 
-  - Entwicklung (#entwicklung)
-  - Ziele (#ziele)
+  - [Entwicklung](#entwicklung)
+  - [Ziele](#ziele)
   
   </details>
 
