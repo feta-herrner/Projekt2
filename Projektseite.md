@@ -12,7 +12,7 @@ Dies ist die Projektseite zu "Wap Bap 2", erstellt von Lotta L. und Felix Herrma
   </details>
 
 ## Übersicht:
-## <details>
+<details>
 <summary>Inhalt</summary>
   
  ###### - [Einführung](#einführung)
