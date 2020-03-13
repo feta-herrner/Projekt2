@@ -1,6 +1,6 @@
-# Informatikprojekt: Wap Bap 2
+## Informatikprojekt: Wap Bap 2
 
-## Einführung
+### Einführung
 Dies ist die Projektseite zu "Wap Bap 2", erstellt von Lotta L. und Felix Herrmann im Rahmen des Informatikunterrichts. Bei "Wap Bap" 2 handelt es sich um eine in Greenfoot erstellte Spielesammlung.
 
 
@@ -11,7 +11,7 @@ Dies ist die Projektseite zu "Wap Bap 2", erstellt von Lotta L. und Felix Herrma
   
   </details>
 
-## Übersicht:
+### Übersicht:
 <details>
 <summary>Inhalt</summary>
   
@@ -25,16 +25,16 @@ Dies ist die Projektseite zu "Wap Bap 2", erstellt von Lotta L. und Felix Herrma
   
   </details>
 
-### Einführung <a name="einführung"></a>
+#### Einführung <a name="einführung"></a>
 - wer sind wir?
 - was ist das hier?
 - was ist Greenfoot?
 - 
 
-### Idee <a name="idee"></a> 
-### Code
-#### MyWorld
-####
-### Entwicklung
-### Ziele
-### 
+#### Idee <a name="idee"></a> 
+#### Code
+##### MyWorld
+#####
+#### Entwicklung
+#### Ziele
+#### 
