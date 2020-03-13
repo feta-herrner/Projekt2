@@ -15,13 +15,13 @@ Dies ist die Projektseite zu "Wap Bap 2", erstellt von Lotta L. und Felix Herrma
 <details>
 <summary>Inhalt</summary>
   
- ###### - [Einführung](#einführung)
- ###### - [Idee](#idee)
- ###### - [Code](#code)
- ###### - [MyWorld](#myworld)
- ###### - 
- ###### - [Entwicklung](#entwicklung)
- ###### - [Ziele](#ziele)
+ ######  [Einführung](#einführung)
+ ######  [Idee](#idee)
+ ######  [Code](#code)
+ ######  [MyWorld](#myworld)
+ ######  
+ ######  [Entwicklung](#entwicklung)
+ ######  [Ziele](#ziele)
   
   </details>
 
