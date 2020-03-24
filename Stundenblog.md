@@ -130,8 +130,7 @@ Um ein Grundgerüst für unser erstes Spiel "4 gewinnt" zu errichten, haben wir 
 Natürlich brauchen wir auch Spieler, die wir in einer Actorklasse definiert haben. Als Bild setzten wir ein mal einen blauen Kreis ein, den wir bei Gimp ausgeschnitten haben, und für den anderen ein grünes Kreuz.
 Dies hat uns leider mehr Zeit als erwartet gekostet, doch am Ende haben wir 2 sehr schöne Ergebnisse erhalten.
 
-<img src="https://user-images.githubusercontent.com/54102146/77445539-838db380-6ded-11ea-8908-23b7557d7fc1.png" width="48">
-<img src="https://user-images.githubusercontent.com/54102146/77445554-87213a80-6ded-11ea-8654-1622b2f5ba9f.png" width="54">
+<img src="https://user-images.githubusercontent.com/54102146/77445539-838db380-6ded-11ea-8908-23b7557d7fc1.png" width="48"><img src="https://user-images.githubusercontent.com/54102146/77445554-87213a80-6ded-11ea-8654-1622b2f5ba9f.png" width="54">
 
 
 
@@ -141,7 +140,7 @@ Erst hatten wir ein paar Probleme. Der Counter wurde nicht erhöht, was dazu fü
 Herr Buhl konnte uns glücklicherweise weiterhelfen. Nach langem Suchen konnte er uns erklären, dass wir die Variable, welche die Spielzüge zählt als "static" definieren müssen, damit nicht jedes Feld seine eigene "Spielzüge" variable erhöht, wenn ein Kreis oder Kreuz hineingesetzt wird...
 Im Endeffekt also viel Stress um wenig Inhalt, aber so ist das bei der Fehlersuche ja oft beim Programmieren.
 
-<img src="https://user-images.githubusercontent.com/54102146/77447936-88a03200-6df0-11ea-9b51-e9597c5161ce.png" width="32">
+<img src="https://user-images.githubusercontent.com/54102146/77447936-88a03200-6df0-11ea-9b51-e9597c5161ce.png" width="54">
 
 
 ####  06. Februar <a name="06.02"></a>
