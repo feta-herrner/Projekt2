@@ -143,7 +143,6 @@ Herr Buhl konnte uns glücklicherweise weiterhelfen. Nach langem Suchen konnte e
 Im Endeffekt also viel Stress um wenig Inhalt, aber so ist das bei der Fehlersuche ja oft beim Programmieren.
 
 <img src="https://user-images.githubusercontent.com/54102146/77447936-88a03200-6df0-11ea-9b51-e9597c5161ce.png" width="48">
-"https://user-images.githubusercontent.com/54102146/77447936-88a03200-6df0-11ea-9b51-e9597c5161ce.png"
 
 
 ####  06. Februar <a name="06.02"></a>
