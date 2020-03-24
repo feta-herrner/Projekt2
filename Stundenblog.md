@@ -152,8 +152,8 @@ Kurz: jetzt wird der neue Hintergrund hervorgerufen sobald TicTacToe in der Spie
 ####  12. Februar <a name="12.02"></a>
 Damit man das ausgewählte Spiel frühzeitig abbrechen kann, haben wir nun ein weißes "x" eingefügt. Im Code ist es als Stop, als eigener Actor, definiert, der durch das Anklicken auf einen Befehl, "reset", in der World zugreift.  Dadurch werden alle Objekte aus der Welt entfernt und automatisch der "prepare" Befehl ausgeführt, der den Hintergund und die Spielesammlung wiederherstellt. Ziemlich tricky oder? ;)
 
-<img width="523" alt="Bildschirmfoto 2020-03-24 um 19 59 33" src="https://user-images.githubusercontent.com/54102146/77466138-205e4a00-6e0a-11ea-9665-795756e6ff2d.png">
-<img width="578" alt="Bildschirmfoto 2020-03-24 um 20 00 03" src="https://user-images.githubusercontent.com/54102146/77466143-20f6e080-6e0a-11ea-9d63-3aa2504dab2c.png">
+<img width="400" alt="Bildschirmfoto 2020-03-24 um 19 59 33" src="https://user-images.githubusercontent.com/54102146/77466138-205e4a00-6e0a-11ea-9665-795756e6ff2d.png">
+<img width="400" alt="Bildschirmfoto 2020-03-24 um 20 00 03" src="https://user-images.githubusercontent.com/54102146/77466143-20f6e080-6e0a-11ea-9d63-3aa2504dab2c.png">
 
 ####  13. Februar <a name="13.02"></a>
 In der heutigen Stunde haben wir ein Limit eingebaut. Dies verhindert, dass man mehrere Spielerobjekte in ein Spielfeld setzen kann, es also keine Dopplung gibt. Wird ein Objekt in das Feldgesetzt erhöht sich der Limitcounter von 0 auf 1. Der gesamte Setzbefehl des Objekts kann auf dem betreffenden Feld nur ausgeführt werden, wenn der Counter 0 ist. 
