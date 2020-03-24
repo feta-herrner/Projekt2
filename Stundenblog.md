@@ -20,17 +20,40 @@
   
 ##### [14.01.20](#14.01)  
 ##### [15.01.20](#15.01)  
-##### [16.01.20](#16.01)
 ##### [21.01.20](#21.01)
-##### [22.01.20](#22.01)
 ##### [23.01.20](#23.01)
 ##### [28.01.20](#28.01)
   
 </details>
+
+<details>
+  <summary>Februar</summary>
+    
+##### [05.02.20](#05.02)  
+##### [06.02.20](#06.02)
+##### [12.02.20](#12.02)
+##### [13.02.20](#13.02)
+##### [14.02.20](#14.02)
+##### [19.02.20](#19.02)
+##### [20.02.20](#20.02)
+##### [21.02.20](#21.02)
+##### [26.02.20](#26.02)
+##### [27.02.20](#27.02) 
+ 
+</details>
+
+  <details>
+  <summary>März</summary>
   
-  #### 10. Dezember<a name="10.12"></a>
- Die Abgabe des Fischi Projekts ist schon einen Monat her. Schweren Herzens haben wir nun beschlossen, die Zeiten mit Fischi, so schön sie auch waren, hinter uns zu lassen und uns auf ein neues Abenteuer in Greenfoot zu begeben. Unser "Spaghetti-Code" in Fischi hat uns teilweise zu schaffen gemacht, weshalb wir beschlossen haben, zu versuchen, dieses mal von Grund auf strukturierter vorzugehen.
-  Zuallererst musste natürlich erstmal eine Idee für ein neues Projekt her. Ein Spiel haben wir ja schon mit einigem Erfolg programmiert, weshalb sich augenscheinlich nun zwei Wege für uns darboten:
+##### [11.03.20](#11.03)
+##### [13.03.20](#13.03)
+##### [19.03.20](#19.03)
+  
+</details>
+  
+#### 10. Dezember<a name="10.12"></a>
+Die Abgabe des Fischi Projekts ist schon einen Monat her. Schweren Herzens haben wir nun beschlossen, die Zeiten mit Fischi, so schön sie auch waren, hinter uns zu lassen und uns auf ein neues Abenteuer in Greenfoot zu begeben. Unser "Spaghetti-Code" in Fischi hat uns teilweise zu schaffen gemacht, weshalb wir beschlossen haben, zu versuchen, dieses mal von Grund auf strukturierter vorzugehen.
+Zuallererst musste natürlich erstmal eine Idee für ein neues Projekt her. Ein Spiel haben wir ja schon mit einigem Erfolg programmiert, weshalb sich augenscheinlich nun zwei Wege für uns darboten:
 Unser angeeignetes Wissen über diese Art Spiel nutzen, um ein ähnliches/ fortgschritteneres Spiel zu erschaffen oder ein anderes Projekt in Greenfoot umsetzen.
 
 Da wir uns in Greenfoot gut eingelebt haben, wollten wir diese Plattform aber zunächst eher ungern wieder verlassen.
@@ -88,22 +111,15 @@ https://unterrichten.zum.de/wiki/Java/Schiffeversenken
 Leider konnten wir beide heute nicht am Informatikunterricht teilnehmen, weil wir aufgrund der Schulrunde von "Jugend debattiert" verhindert waren.
 
 #### 15. Januar <a name="15.01"></a>
-Überraschenderweise haben wir unsere Projektidee noxh nicht über den Haufen geworfen!
+Überraschenderweise haben wir unsere Projektidee noch nicht über den Haufen geworfen!
 Allerdings haben wir sie etwas erweitert: Je nach dem, wie es die Zeit ermöglicht, möchten wir mehrere Minispiele für 2 Personen erstellen. Diese hat man im Überblick auf einer Seite und kann dann eines auswählen, das man spielen möchte. Nach Abschluss kommt man dann wieder auf die Übersicht. 
 Aus dem Gespräch mit Herrn Buhl hat sich die Struktur der Spiele ergeben; wir werden uns nun mehr auf die Objektklassen konzentrieren und nicht auf die einzelnen Actors. Dazu ziehen wir das Buch "Einführung in Java mit Greenfoot" zu Hilfe.
-
-#### 16. Januar <a name="16.01"></a>
-
 
 
 #### 21. Januar <a name="21.01"></a>
 Am heutigen Tage war die gesamte Klasse 12g im DESY in Hamburg. Da Teilchenbeschleunigung zwar ein sehr spannender Bereich der Physik ist, der Ausflug allerdings nicht optimal bezüglich der neuen Kenntnisgewinnung gestaltet war, mussten wir den Infounterricht schmerzlich vermissen.
 
-#### 22. Januar <a name="22.01"></a>
-((Diese Stunde füllten wir mit dem Kapitel xxx aus der Greenfoot-Lektüre. Wir lernten xxx und werden morgen versuchen dieses Wissen umzusetzen.))
 
---> würde lieber was schreiben, was stimmt, haben doch genug material von Sachen die wir/ich zuhause gemacht haben, siehe google docs.
-und jaja das ist neu i know, aber ist doch egal jetzt is es ja da ;D
 
 #### 23. Januar <a name="23.01"></a>
 Um ein Grundgerüst für unser erstes Spiel "4 gewinnt" zu errichten, haben wir MyWorld so programmiert, dass zu Beginn 6x6 leere Felder erscheinen. Diese haben wir selbst mit Gimp erstellt. 
@@ -126,4 +142,78 @@ Herr Buhl konnte uns glücklicherweise weiterhelfen. Nach langem Suchen konnte e
 
 BILD
 
-v
+
+####  06. Februar <a name="06.02"></a>
+Am heutigen Tage haben wir etwas an der Optik gepfeilt. Den Hintergund haben wir vorher in der TicTacToe-Klasse definiert, also erschien er, wenn das Spiel ausgewählt wurde. Da das Erscheinen bzw. Bauen der Felder bei uns in der World war, mussten wir dies ändern. 
+Kurz: jetzt wird der neue Hintergrund hervorgerufen sobald TicTacToe in der Spielesammlung angeklickt wird. Gleichzeitig verschwindet das kleine TictacToe-Feld.
+Bei dem aktuellen Code verschwand jetzt aber nur das ausgewählte Spielsymbol und nicht die restlichen, weshalb wir aus der Java-Bibliothek den passenden Code importiert haben.
+
+
+####  12. Februar <a name="12.02"></a>
+Damit man das ausgewählte Spiel frühzeitig abbrechen kann, haben wir nun ein weißes "x" eingefügt. Im Code ist es als Stop, als eigener Actor, definiert, der durch das Anklicken auf einen Befehl, "reset", in der World zugreift.  Dadurch werden alle Objekte aus der Welt entfernt und automatisch der "prepare" Befehl ausgeführt, der den Hintergund und die Spielesammlung wiederherstellt.
+
+
+Screenshot
+
+####  13. Februar <a name="13.02"></a>
+In der heutigen Stunde haben wir ein Limit eingebaut. Dies verhindert, dass man mehrere Spielerobjekte in ein Spielfeld setzen kann, es also keine Dopplung gibt. Wird ein Objekt in das Feldgesetzt erhöht sich der Limitcounter von 0 auf 1. Der gesamte Setzbefehl des Objekts kann auf dem betreffenden Feld nur ausgeführt werden, wenn der Counter 0 ist. 
+
+
+Screenshot
+
+####  14. Februar <a name="14.02"></a>
+Da wir noch nicht zufrieden damit waren, dass man  das Spiel nur beenden, aber nicht anhalten konnte, haben wir eine FunktIon zum Pausieren eingeführt. Dafür haben wir, wie beim Beenden des Spiels, ein Pausezeichen in Gimp erstellt. 
+Beim Anklicken mit der Maus wird ein Actor auf dem Bildschirm platziert. Dieser nimmt den Bildschirm ein und erzeugt das Gefühl, das Spiel wäre angehalten, obwohl es im Prinzip im Hintergrund weiterläuft. Durch erneutes Anklicken verschwindet der Actor wieder und das Spiel läuft wie gewohnt weiter.
+
+Screenshot Pausebildschirm
+Screenshot Code
+
+####  19. Februar <a name="19.02"></a>
+Betrachtet man unseren alten Code, fällt schnell auf: Die Art und Weise, wie die Felder alle einzeln definiert sind und dadurch auch einzeln platziert werden, ist absoluter BULLSH♡T. 
+Entschuldigen Sie die Ausdrucksweise, aber ich denke das würden Sie auch so bezeichnen :). 
+Glücklicherweise hatte Herr Buhl eine Lösung für dieses Problem: "Arrays"
+Während Felix bereits eine gewisse Vorstellung davon hatte, was dies für unseren Code bedeuten könnte, dachte Lotta darüber nach, was das denn ist. "Array klingt ein bisschen wie 'X-ray!"
+Ja, gut... es wurde zumindest viel gelacht!
+
+
+####  20. Februar <a name="20.02"></a>
+Einige,um nicht zu lügen; viel Recherche im WorldWideWeb später konnte Lotta festhalten: Arrays sind Objekte in Java. Es ist eine Aneindanderreihung von Elementen eines festen Datentyps. Lotta stellt es sich wie eine Variable als Schachtel vor. Diese Schachtel hat durchnummeriert Unterteilungen, in denen die Werte der einzelnen Elemente gespeichert sind. Man beginnt bei 0.
+
+
+####  21. Februar <a name="21.02"></a>
+Nach dieser vielleicht etwas merkwürdigen Metapher, hier die Anwendung in unserem Code:
+
+Screenshot Code
+
+Dadurch könnten wir die gesamte Erstellung  des Spielfeldes in 4 Zeilen schreiben!
+Ergebnis: Lotta ist beeindruckt von Informatik.
+
+####  26. Februar <a name="26.02"></a>
+Jetzt, wo wir den riesigen Erfolg funktionierender Arrays feiern konnten, nahmen wir uns die Zeit, den Fortschritt auf der Projektseite festzuhalten, auch wenn dies die heutige und möglicherweise auch die nächste Informatikstunde in Anspruch nehmen würde.
+
+
+####  27. Februar <a name="27.02"></a>
+Stichwort Zeitmanagement: Felix und Lotta sind BEEINDRUCKT, dass sie dieses mal nicht unter Zeitdruck geraten, es ist noch etwa ein Monat übrig bis die Dokumentation des Spiels abgegeben werden muss! 
+Nun fragt man sich natürlich: [Woran hat es gelegen?](https://youtu.be/eHKZlXlqcS4) 
+Unserer Meinung nach war die Ursache: Frustration nicht zulassen! 
+Denn ja, auch in diesem Halbjahr sind wir einige Male bezüglich des Codes auf die Schnauze gefallen, hatten Blockaden, usw. Trotzdem sind wir stolz auf das, was wir bisher geschafft haben!
+
+####  11. März <a name="11.03"></a>
+Was uns vom heutigen Tage am meisten im Gedächtnis geblieben ist: Herrn Buhls verstörter Gesichtsausdruck als Peter nur in Bikini und Hawaiirock und Florian als sexy Schulmädchen verkleidet in seinen Raum kamen. Ach, wie schön die Mottowoche doch ist!
+Ein weiteres Highlight dieser Stunde: Das lebende Werbeschild für "Super trocken".
+
+Selfie von Felix und Herrn Buhl
+
+Selbstverständlich haben wir gewissenhaft weiter gearbeitet und den Code kontrolliert, verschönert und die Screenshots im Stundenblog erweitert.
+
+####  13. März <a name="13.03"></a>
+Mottowoche Tag 5: Schlafanzug
+Leider konnte Lotta sich nicht selbst ein Bild davon machen, da sie eine Klausur nachschreiben musste.
+Felix arbeitete natürlich weiter an unserem "traumhaften" Code (Achtung schlechter Witz bezüglich des Mottos)
+Nun die entscheidende Frage: Wenn normale Leute Schäfchen zählen, zählen Informatiker dann Loops?
+
+Was wir nicht wussten: Diese Stunde ist die letzte, bevor die verfrühten Ferien anfangen. 
+An der Stelle möchten wir Herrn Buhl und seiner Familie beste Gesundheit wünschen und, dass sie die "Corona-Ferien" zur Erholung nutzen.
+
+####  19. März <a name="19.03"></a>
+Eigentlich hätten wir heute Unterricht, weshalb wir uns dazu entschieden haben, einen Videoanruf abzuhalten, um die Dokumente noch ein mal durchzugehen. Es sind nur noch wenige Tage bis zur Abgabe, weshalb die letzten Feinschliffe durchgeführt werden. Die Projektseite ist so gut wie fertig, ebenfalls der Stundenblog, in den noch einzelne Sceenshots eingefügt werden müssen.
