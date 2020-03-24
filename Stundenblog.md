@@ -131,8 +131,7 @@ Natürlich brauchen wir auch Spieler, die wir in einer Actorklasse definiert hab
 Dies hat uns leider mehr Zeit als erwartet gekostet, doch am Ende haben wir 2 sehr schöne Ergebnisse erhalten.
 
 <img src="https://user-images.githubusercontent.com/54102146/77445539-838db380-6ded-11ea-8908-23b7557d7fc1.png" width="48">
-
-<img src="https://user-images.githubusercontent.com/54102146/77445554-87213a80-6ded-11ea-8654-1622b2f5ba9f.png" width="48">
+<img src="https://user-images.githubusercontent.com/54102146/77445554-87213a80-6ded-11ea-8654-1622b2f5ba9f.png" width="54">
 
 
 
