@@ -130,7 +130,7 @@ Um ein Grundgerüst für unser erstes Spiel "4 gewinnt" zu errichten, haben wir 
 Natürlich brauchen wir auch Spieler, die wir in einer Actorklasse definiert haben. Als Bild setzten wir ein mal einen blauen Kreis ein, den wir bei Gimp ausgeschnitten haben, und für den anderen ein grünes Kreuz.
 Dies hat uns leider mehr Zeit als erwartet gekostet, doch am Ende haben wir 2 sehr schöne Ergebnisse erhalten.
 
-<img src="https://user-images.githubusercontent.com/54102146/77445539-838db380-6ded-11ea-8908-23b7557d7fc1.png" width="48"><img src="https://user-images.githubusercontent.com/54102146/77445554-87213a80-6ded-11ea-8654-1622b2f5ba9f.png" width="54">
+<img src="https://user-images.githubusercontent.com/54102146/77445539-838db380-6ded-11ea-8908-23b7557d7fc1.png" width="48"><img src="https://user-images.githubusercontent.com/54102146/77445554-87213a80-6ded-11ea-8654-1622b2f5ba9f.png" width="68">
 
 
 
@@ -140,20 +140,20 @@ Erst hatten wir ein paar Probleme. Der Counter wurde nicht erhöht, was dazu fü
 Herr Buhl konnte uns glücklicherweise weiterhelfen. Nach langem Suchen konnte er uns erklären, dass wir die Variable, welche die Spielzüge zählt als "static" definieren müssen, damit nicht jedes Feld seine eigene "Spielzüge" variable erhöht, wenn ein Kreis oder Kreuz hineingesetzt wird...
 Im Endeffekt also viel Stress um wenig Inhalt, aber so ist das bei der Fehlersuche ja oft beim Programmieren.
 
-<img src="https://user-images.githubusercontent.com/54102146/77447936-88a03200-6df0-11ea-9b51-e9597c5161ce.png" width="54">
+<img src="https://user-images.githubusercontent.com/54102146/77447936-88a03200-6df0-11ea-9b51-e9597c5161ce.png" width="80">
 
 
 ####  06. Februar <a name="06.02"></a>
 Am heutigen Tage haben wir etwas an der Optik gepfeilt. Den Hintergund haben wir vorher in der TicTacToe-Klasse definiert, also erschien er, wenn das Spiel ausgewählt wurde. Da das Erscheinen bzw. Bauen der Felder bei uns in der World war, mussten wir dies ändern. 
-Kurz: jetzt wird der neue Hintergrund hervorgerufen sobald TicTacToe in der Spielesammlung angeklickt wird. Gleichzeitig verschwindet das kleine TictacToe-Feld.
-Bei dem aktuellen Code verschwand jetzt aber nur das ausgewählte Spielsymbol und nicht die restlichen, weshalb wir aus der Java-Bibliothek den passenden Code importiert haben.
+Kurz: jetzt wird der neue Hintergrund hervorgerufen sobald TicTacToe in der Spielesammlung angeklickt wird. Gleichzeitig verschwindet das kleine TictacToe-Feld. Damit wir aber eine Liste von allen existierenden "Spielauswahlfeldern" esrstellen konnten, mussten wir in der Welt noch eine Java Bibliothek importieren. Das herauszufinden hat zwar etwas gedauert, sich dafür dann aber umso besser angefühlt, als alles funktioneirt hat.
+
 
 
 ####  12. Februar <a name="12.02"></a>
-Damit man das ausgewählte Spiel frühzeitig abbrechen kann, haben wir nun ein weißes "x" eingefügt. Im Code ist es als Stop, als eigener Actor, definiert, der durch das Anklicken auf einen Befehl, "reset", in der World zugreift.  Dadurch werden alle Objekte aus der Welt entfernt und automatisch der "prepare" Befehl ausgeführt, der den Hintergund und die Spielesammlung wiederherstellt.
+Damit man das ausgewählte Spiel frühzeitig abbrechen kann, haben wir nun ein weißes "x" eingefügt. Im Code ist es als Stop, als eigener Actor, definiert, der durch das Anklicken auf einen Befehl, "reset", in der World zugreift.  Dadurch werden alle Objekte aus der Welt entfernt und automatisch der "prepare" Befehl ausgeführt, der den Hintergund und die Spielesammlung wiederherstellt. Ziemlich tricky oder? ;)
 
-
-Screenshot
+<img width="523" alt="Bildschirmfoto 2020-03-24 um 19 59 33" src="https://user-images.githubusercontent.com/54102146/77466138-205e4a00-6e0a-11ea-9665-795756e6ff2d.png">
+<img width="578" alt="Bildschirmfoto 2020-03-24 um 20 00 03" src="https://user-images.githubusercontent.com/54102146/77466143-20f6e080-6e0a-11ea-9d63-3aa2504dab2c.png">
 
 ####  13. Februar <a name="13.02"></a>
 In der heutigen Stunde haben wir ein Limit eingebaut. Dies verhindert, dass man mehrere Spielerobjekte in ein Spielfeld setzen kann, es also keine Dopplung gibt. Wird ein Objekt in das Feldgesetzt erhöht sich der Limitcounter von 0 auf 1. Der gesamte Setzbefehl des Objekts kann auf dem betreffenden Feld nur ausgeführt werden, wenn der Counter 0 ist. 
