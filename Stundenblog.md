@@ -130,7 +130,9 @@ Um ein Grundgerüst für unser erstes Spiel "4 gewinnt" zu errichten, haben wir 
 Natürlich brauchen wir auch Spieler, die wir in einer Actorklasse definiert haben. Als Bild setzten wir ein mal einen blauen Kreis ein, den wir bei Gimp ausgeschnitten haben, und für den anderen ein grünes Kreuz.
 Dies hat uns leider mehr Zeit als erwartet gekostet, doch am Ende haben wir 2 sehr schöne Ergebnisse erhalten.
 
-BILD1, BILD2
+![Kroiz2](https://user-images.githubusercontent.com/54102146/77445539-838db380-6ded-11ea-8908-23b7557d7fc1.png)
+
+![!!](https://user-images.githubusercontent.com/54102146/77445554-87213a80-6ded-11ea-8654-1622b2f5ba9f.png)
 
 
 
