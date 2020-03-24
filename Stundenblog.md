@@ -131,17 +131,19 @@ Natürlich brauchen wir auch Spieler, die wir in einer Actorklasse definiert hab
 Dies hat uns leider mehr Zeit als erwartet gekostet, doch am Ende haben wir 2 sehr schöne Ergebnisse erhalten.
 
 <img src="https://user-images.githubusercontent.com/54102146/77445539-838db380-6ded-11ea-8908-23b7557d7fc1.png" width="48">
-![!!](https://user-images.githubusercontent.com/54102146/77445554-87213a80-6ded-11ea-8654-1622b2f5ba9f.png)
+
+<img src="https://user-images.githubusercontent.com/54102146/77445554-87213a80-6ded-11ea-8654-1622b2f5ba9f.png" width="48">
 
 
 
 ####  05. Februar <a name="05.02"></a>
 Damit die beiden immer abwechselnd am Zuge sind, setzten wir einen Counter ein, der die Spielzüge zählt. Die geraden Zahlen stehen für den blauen Kreis und die ungeraden für das grüne Kreuz.
 Erst hatten wir ein paar Probleme. Der Counter wurde nicht erhöht, was dazu führte, dass immer nur der blaue Kreis seinen Zug setzen durfte. Die Problematik lag darin, dass wir in der World die Felder alle einzeln definiert haben, weshalb der Counter sich nur auf je ein Feld bezog und darum nicht funktioniert hat. 
-Herr Buhl konnte uns glücklicherweise weiterhelfen. Nach langem Suchen konnte er uns erklären, dass wir ein "Static" vor den Code setzen müssen, um die Felder als eine Kategorie abzurufen.
+Herr Buhl konnte uns glücklicherweise weiterhelfen. Nach langem Suchen konnte er uns erklären, dass wir die Variable, welche die Spielzüge zählt als "static" definieren müssen, damit nicht jedes Feld seine eigene "Spielzüge" variable erhöht, wenn ein Kreis oder Kreuz hineingesetzt wird...
+Im Endeffekt also viel Stress um wenig Inhalt, aber so ist das bei der Fehlersuche ja oft beim Programmieren.
 
-
-BILD
+<img src="https://user-images.githubusercontent.com/54102146/77447936-88a03200-6df0-11ea-9b51-e9597c5161ce.png" width="48">
+"https://user-images.githubusercontent.com/54102146/77447936-88a03200-6df0-11ea-9b51-e9597c5161ce.png"
 
 
 ####  06. Februar <a name="06.02"></a>
