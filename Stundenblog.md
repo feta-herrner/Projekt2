@@ -142,7 +142,7 @@ Erst hatten wir ein paar Probleme. Der Counter wurde nicht erhöht, was dazu fü
 Herr Buhl konnte uns glücklicherweise weiterhelfen. Nach langem Suchen konnte er uns erklären, dass wir die Variable, welche die Spielzüge zählt als "static" definieren müssen, damit nicht jedes Feld seine eigene "Spielzüge" variable erhöht, wenn ein Kreis oder Kreuz hineingesetzt wird...
 Im Endeffekt also viel Stress um wenig Inhalt, aber so ist das bei der Fehlersuche ja oft beim Programmieren.
 
-<img src="https://user-images.githubusercontent.com/54102146/77447936-88a03200-6df0-11ea-9b51-e9597c5161ce.png" width="48">
+<img src="https://user-images.githubusercontent.com/54102146/77447936-88a03200-6df0-11ea-9b51-e9597c5161ce.png" width="32">
 
 
 ####  06. Februar <a name="06.02"></a>
