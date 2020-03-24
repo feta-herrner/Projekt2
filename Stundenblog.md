@@ -158,15 +158,17 @@ Damit man das ausgewählte Spiel frühzeitig abbrechen kann, haben wir nun ein w
 ####  13. Februar <a name="13.02"></a>
 In der heutigen Stunde haben wir ein Limit eingebaut. Dies verhindert, dass man mehrere Spielerobjekte in ein Spielfeld setzen kann, es also keine Dopplung gibt. Wird ein Objekt in das Feldgesetzt erhöht sich der Limitcounter von 0 auf 1. Der gesamte Setzbefehl des Objekts kann auf dem betreffenden Feld nur ausgeführt werden, wenn der Counter 0 ist. 
 
+<img width="171" alt="Bildschirmfoto 2020-03-24 um 20 02 21" src="https://user-images.githubusercontent.com/54102146/77466361-70d5a780-6e0a-11ea-9777-4d149413ee51.png">
+<img width="240" alt="Bildschirmfoto 2020-03-24 um 20 02 36" src="https://user-images.githubusercontent.com/54102146/77466363-716e3e00-6e0a-11ea-95b1-157605ff71ad.png">
 
-Screenshot
 
 ####  14. Februar <a name="14.02"></a>
 Da wir noch nicht zufrieden damit waren, dass man  das Spiel nur beenden, aber nicht anhalten konnte, haben wir eine FunktIon zum Pausieren eingeführt. Dafür haben wir, wie beim Beenden des Spiels, ein Pausezeichen in Gimp erstellt. 
 Beim Anklicken mit der Maus wird ein Actor auf dem Bildschirm platziert. Dieser nimmt den Bildschirm ein und erzeugt das Gefühl, das Spiel wäre angehalten, obwohl es im Prinzip im Hintergrund weiterläuft. Durch erneutes Anklicken verschwindet der Actor wieder und das Spiel läuft wie gewohnt weiter.
 
-Screenshot Pausebildschirm
-Screenshot Code
+<img width="1002" alt="Bildschirmfoto 2020-03-24 um 20 04 34" src="https://user-images.githubusercontent.com/54102146/77466572-c447f580-6e0a-11ea-970e-a0a4b70cc2fe.png">
+<img width="425" alt="Bildschirmfoto 2020-03-24 um 20 04 43" src="https://user-images.githubusercontent.com/54102146/77466581-c611b900-6e0a-11ea-95ca-9997f838ae1a.png">
+<img width="400" alt="Bildschirmfoto 2020-03-24 um 20 04 52" src="https://user-images.githubusercontent.com/54102146/77466583-c611b900-6e0a-11ea-9774-5f340937290c.png">
 
 ####  19. Februar <a name="19.02"></a>
 Betrachtet man unseren alten Code, fällt schnell auf: Die Art und Weise, wie die Felder alle einzeln definiert sind und dadurch auch einzeln platziert werden, ist absoluter BULLSH♡T. 
@@ -177,13 +179,19 @@ Ja, gut... es wurde zumindest viel gelacht!
 
 
 ####  20. Februar <a name="20.02"></a>
-Einige,um nicht zu lügen; viel Recherche im WorldWideWeb später konnte Lotta festhalten: Arrays sind Objekte in Java. Es ist eine Aneindanderreihung von Elementen eines festen Datentyps. Lotta stellt es sich wie eine Variable als Schachtel vor. Diese Schachtel hat durchnummeriert Unterteilungen, in denen die Werte der einzelnen Elemente gespeichert sind. Man beginnt bei 0.
+Einige, um nicht zu lügen; viel Recherche im WorldWideWeb später konnte Lotta festhalten: Arrays sind Objekte in Java. Es ist eine Aneindanderreihung von Elementen eines festen Datentyps. Lotta stellt es sich wie eine Variable als Schachtel vor. Diese Schachtel hat durchnummeriert Unterteilungen, in denen die Werte der einzelnen Elemente gespeichert sind. Man beginnt bei 0.
 
 
 ####  21. Februar <a name="21.02"></a>
-Nach dieser vielleicht etwas merkwürdigen Metapher, hier die Anwendung in unserem Code:
+Nach dieser vielleicht etwas merkwürdigen Metapher, hier die Anwendung in unserem Code:(eine von vielen... wie uns nämlich später klar geworden ist brauch(t)en wir Arrays ab diesem Zeitpunkt nämlich für fast alles :x)
 
-Screenshot Code
+
+<img width="402" alt="Bildschirmfoto 2020-03-24 um 20 07 09" src="https://user-images.githubusercontent.com/54102146/77466852-34567b80-6e0b-11ea-8c3d-033f247a9cfb.png">
+<img width="203" alt="Bildschirmfoto 2020-03-24 um 20 07 20" src="https://user-images.githubusercontent.com/54102146/77466856-34ef1200-6e0b-11ea-8cab-91bf1146e7c7.png">
+<img width="352" alt="Bildschirmfoto 2020-03-24 um 20 07 36" src="https://user-images.githubusercontent.com/54102146/77466857-3587a880-6e0b-11ea-8d67-29d7e551bb5a.png">
+<img width="563" alt="Bildschirmfoto 2020-03-24 um 20 07 44" src="https://user-images.githubusercontent.com/54102146/77466859-36203f00-6e0b-11ea-9497-5a86faa59c59.png">
+<img width="358" alt="Bildschirmfoto 2020-03-24 um 20 07 49" src="https://user-images.githubusercontent.com/54102146/77466860-36203f00-6e0b-11ea-959d-a83e43f0a838.png">
+
 
 Dadurch könnten wir die gesamte Erstellung  des Spielfeldes in 4 Zeilen schreiben!
 Ergebnis: Lotta ist beeindruckt von Informatik.
@@ -202,7 +210,7 @@ Denn ja, auch in diesem Halbjahr sind wir einige Male bezüglich des Codes auf d
 Was uns vom heutigen Tage am meisten im Gedächtnis geblieben ist: Herrn Buhls verstörter Gesichtsausdruck als Peter nur in Bikini und Hawaiirock und Florian als sexy Schulmädchen verkleidet in seinen Raum kamen. Ach, wie schön die Mottowoche doch ist!
 Ein weiteres Highlight dieser Stunde: Das lebende Werbeschild für "Super trocken".
 
-Selfie von Felix und Herrn Buhl
+SELFIEEE
 
 Selbstverständlich haben wir gewissenhaft weiter gearbeitet und den Code kontrolliert, verschönert und die Screenshots im Stundenblog erweitert.
 
