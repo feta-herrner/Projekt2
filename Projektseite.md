@@ -15,9 +15,9 @@ Dies ist die Projektseite zu "Wap Bap 2", erstellt von Lotta L. und Felix Herrma
 <details>
 <summary>Inhalt</summary>
   
- ######  [Einführung](#1)
- ######  [Idee](#idee)
- ######  [Code](#code)
+ #####  [Einführung](#1)
+ #####  [Idee](#idee)
+ #####  [Code](#code)
  ######  [MyWorld](#myworld)
  ######  
  ######  [Entwicklung](#entwicklung)
@@ -32,11 +32,20 @@ Die Idee für die Spielesammlung war, die Greenfoot und Java- Kenntnisse, die wi
 
 Später kam uns auch die Idee, unser bereits existierendes Spiel "Fischi von Kla" in leicht verbesserter und erweiterter Form in die Spielesammlung als "Einzelspiel" zu integrieren.
 
+#### Texturen
+- arbeit uin gimp, viele texturen komplett alleine erstellt.
 #### Code
 
 
 ##### MyWorld
+
 #####
+
 #### Entwicklung
+Unser Spielesammlung "Wap Bap" hat in ihrem knappen halben Jahr, die sie nun in der Entwicklungen viele Stadien durchlaufen, von denen wir in diesem alpha-release noch Fragmente auskommentiert im Code gelassen haben, welche bei der Endveröffentlichung entfernt werden werden. So wurde ursprünglich beispielsweise jedes Feld im "vier gewinnt"-Spiel als einzelne Subklasse generiert, was sehr viel Spaghetti-code nach sich zog. Das besondere an diesem Projekt war, dass wir als Entwickler auf der Reise sehr viel von, aber auch um und über unser Spiel, sowie Greenfoot als Programmierumgebung gelernt haben, was dazu geführt hat, dass wir unserem Code immer wieder optimiert, verändert und teilweise komplett "from scratch" neu geschrieben haben. Das führt dazu, dass das Spiel in dieser Alpha nur noch wenig mit dem ersten spielbaren Projekt zu tun hat, was uns aber auch stolz macht, weil es uns zeigt, dass wir an diesem Projekt als "Programmierer" wirklich gewachsen sind und dazu gelernt haben.
+
 #### Ziele
+- weitere Spiele hobbymäßig hinzufügen.
+- port auf eine andere "Plattform"/ einen anderen compiler?
+
 #### 
