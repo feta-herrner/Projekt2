@@ -18,8 +18,8 @@ Dies ist die Projektseite zu "Wap Bap 2", erstellt von Lotta L. und Felix Herrma
  #####  3. [Code](#code)
  ######  3.1 [MyWorld](#myworld)
  ######  3.2 
- ######  4. [Entwicklung](#entwicklung)
- ###### 5. [Ziele](#ziele)
+ #####  4. [Entwicklung](#entwicklung)
+ ##### 5. [Ziele](#ziele)
 
 
 #### Idee <a name="idee"></a> 
