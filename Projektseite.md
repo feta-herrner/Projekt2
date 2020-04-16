@@ -282,7 +282,7 @@ for(int n=1; n<5; n++)
             }
 ```
 
-##### whoWins <a name="whowins"></a>
+###### whoWins <a name="whowins"></a>
 Whowins berechnet mit einer einfachen Abfrage, ob die zahl des gewinners gerade oder ungerade (also 1 oder 2) ist, um zu prüfen ob "Typ" aus Checkwin für kreise oder kreuze stand und führt entsprechend [KreisWin](#Kreiswin) oder [KreuzWin](#KreuzWin) aus.
 ```java
 private void whoWins(int x) //done
@@ -299,7 +299,7 @@ private void whoWins(int x) //done
 ```
 
 
-##### KreisWin / Kreuwin 
+###### KreisWin / Kreuwin 
 kreiwin und Kreuzwin funktionieren sehr ähnlich. Werden sie aufgerufen, entfernen sie alle Objekte in der Welt, setzen den Hintergrund auf ein Bild, welches anzeigt, dass die entsprechende Klasse gewonnnen hat, um dann den ["reset"](#reset) Befehl auszuführen.
 ```java
 public void KroizWin ()
@@ -342,10 +342,39 @@ public void startgame()
 ```
 
 
-### Feld <a name=Felder"></a>
+### Feld <a name="Felder"></a>
   Feld ist die "Spielfeldklasse von viergewinnt. Sie wird von der ["felderbauen"](#felderbauen) Methode in der ["selection"](#selection) Subwelt platziert.
 Variabeln:
-### Kreuz
+```java
+static int spielzuge;
+    private int limit = 0 ;
+    private String[] cheat = {"b","a","d","a","d","i"} ; 
+    private int cheatdepth = 0 ;
+    private int cheater=0 ;
+```
+Der constructor von Feld skaliert (mal wieder) das Bild
+```java
+public Feld ()
+    {
+        GreenfootImage image = getImage () ;
+        image.scale(image.getWidth() -950, image.getHeight() -950) ;
+        setImage (image);
+        spielzuge=1;
+    }
+```
+###### act
+die act-methode von Felder ruft die methoden ["spielen"](#spielenfelder), ["cheats"](#cheats) und ["whoischeating"](#whoischeating) auf.
+```java
+public void act() 
+    {
+        spielen () ;
+        cheats (cheater) ;  
+        whoischeating() ;
+     }
+```
+
+###### spielen <a name="spielenfelder"></a> 
+
 
 ### Spielauswahl <a name="spielauswahl"></a>
 Die Spielauswahl- Objekte befinden sich beim Starten der Spielesammlung in der [MyWorld](#myWorld). Ihre act-Method ist relativ simpel gehalten. Klickt man ein "Spielauswahl" - Objekt an, berechnet es über seine Koordiante, um welches spiel es sich handelt, um dann die Welt(#subwelten) für das entsprechende Spiel zu setzen.
