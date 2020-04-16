@@ -45,8 +45,9 @@ Später kam uns auch die Idee, unser bereits existierendes Spiel "Fischi von Kla
 Unser Spielesammlung "Wap Bap" hat in ihrem knappen halben Jahr, die sie nun in der Entwicklungen viele Stadien durchlaufen, von denen wir in diesem alpha-release noch Fragmente auskommentiert im Code gelassen haben, welche bei der Endveröffentlichung entfernt werden werden. So wurde ursprünglich beispielsweise jedes Feld im "vier gewinnt"-Spiel als einzelne Subklasse generiert, was sehr viel Spaghetti-code nach sich zog. Das besondere an diesem Projekt war, dass wir als Entwickler auf der Reise sehr viel von, aber auch um und über unser Spiel, sowie Greenfoot als Programmierumgebung gelernt haben, was dazu geführt hat, dass wir unserem Code immer wieder optimiert, verändert und teilweise komplett "from scratch" neu geschrieben haben. Das führt dazu, dass das Spiel in dieser Alpha nur noch wenig mit dem ersten spielbaren Projekt zu tun hat, was uns aber auch stolz macht, weil es uns zeigt, dass wir an diesem Projekt als "Programmierer" wirklich gewachsen sind und dazu gelernt haben.
 
 Hier ein Beispiel, wie unser "Felderbauen" aussah, bevor wir es optimiert haben:
-<img src="https://user-images.githubusercontent.com/54102146/79448691-29de6a80-7fe2-11ea-8c75-dba4ea3f59d4.png" width="300">
-
+ <img src="https://user-images.githubusercontent.com/54102146/79448691-29de6a80-7fe2-11ea-8c75-dba4ea3f59d4.png" width="300">
+optimiert sah das ganze dann schon besser aus:
+ <img src="https://user-images.githubusercontent.com/54102146/79449223-21d2fa80-7fe3-11ea-946b-65d36c7c0184.png" width="300">
 
 #### Ziele
 - weitere Spiele hobbymäßig hinzufügen.
