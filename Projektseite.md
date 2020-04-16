@@ -50,7 +50,7 @@ Im Spiel sieht das dann so aus:
 
 <img src="https://user-images.githubusercontent.com/54102146/79452158-fc94bb00-7fe7-11ea-9a28-eb4b3f1da43a.png" width="350">
 
-Wenn man das entsprechende Spiel dann anklickt, berechnet das Objekt über seine Koordinate, um welches Spiel es sich handelt und startet dieses. (siehe [Spielauswahl](#spielauswahl).
+Wenn man das entsprechende Spiel dann anklickt, berechnet das Objekt über seine Koordinate, um welches Spiel es sich handelt und startet dieses. (siehe [Spielauswahl](#spielauswahl).)
 
 startgame <a name=startgame></a>
 
