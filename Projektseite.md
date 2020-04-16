@@ -13,9 +13,9 @@ Dies ist die Projektseite zu "Wap Bap 2", erstellt von Lotta L. und Felix Herrma
 
 ## Übersicht:
 
- ### 1. [Einführung](#1)
+ ###  1. [Einführung](#1)
  ###  2. [Idee](#idee)
- #### 3. [Code](#code)
+ ### 3. [Code](#code)
  ####  3.1 [MyWorld](#myworld)
  ####  3.2 
  ###  4. [Entwicklung](#entwicklung)
@@ -44,8 +44,6 @@ public MyWorld()
         prepare();
     }
 ```
-(constructor)
-
 ```java
 private void prepare() {
         //Spielauswahl Spielauswahl = new Spielauswahl();
@@ -53,7 +51,6 @@ private void prepare() {
         Spielesammlung () ;
     }
 ```
-(prepare-command)
 ```java
 private void prepare() { 
         startgame();
