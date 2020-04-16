@@ -84,6 +84,7 @@ Wenn man das entsprechende Spiel dann anklickt, berechnet das Objekt über seine
 
 ##### startgame <a name=startgame></a>
 bei der "startgame"-method handelt es sich um eine Methode, die je nach "gamenumber", eine integer variable, die vom aufrufenden objekt "mitgeschickt" wird, den [constructor für das ensprechende Spiel](#Spiele) ausführt.
+
 ```java
 public void startgame (int gamenumber) 
     {
@@ -111,10 +112,32 @@ public void startgame (int gamenumber)
 
 #### Spielauswahl <a name="spielauswahl"></a>
 Die Spielauswahl- Objekte befinden sich beim Starten der Spielesammlung in der [MyWorld](#myWorld). Ihre act-Method ist relativ simpel gehalten. Klickt man ein "Spielauswahl" - Objekt an, berechnet es über seine Koordiante, um welches spiel es sich handelt, um dann die [Welt.startgame](#startgame)-methode mit der entsprechenden Nummer aufzurufen.
-
-<img src="https://user-images.githubusercontent.com/54102146/79453170-96a93300-7fe9-11ea-8b42-ac19a8d2e242.png" width="300">
-
+```java
+public void act() 
+    {
+        
+        if(Greenfoot.mouseClicked(this)) 
+        {
+            MyWorld Welt = (MyWorld) getWorld();
+             int x = (getX() -200) / 200;
+             int y = (getY() -250) / 200;
+             int nr = (x+4*y) ;
+            Welt.startgame (nr) ;
+        }
+    } 
+    
+```
+Der constructor der Spielauswahl beschränkt sich darauf, ihr Bild zu skalieren:
+```java
+public Spielauswahl(GreenfootImage image, String name)
+    {
+        Name = name;
+        image.scale(image.getWidth() -530, image.getHeight() -530) ;
+        setImage (image);
+    }
+```
 #### Spiele <a name="spiele"></a>
+-konstruktoren für einzelne Spiele
 
 ### Entwicklung
 Unser Spielesammlung "Wap Bap" hat in ihrem knappen halben Jahr, die sie nun in der Entwicklungen viele Stadien durchlaufen, von denen wir in diesem alpha-release noch Fragmente auskommentiert im Code gelassen haben, welche bei der Endveröffentlichung entfernt werden werden. So wurde ursprünglich beispielsweise jedes Feld im "vier gewinnt"-Spiel als einzelne Subklasse generiert, was sehr viel Spaghetti-code nach sich zog. Das besondere an diesem Projekt war, dass wir als Entwickler auf der Reise sehr viel von, aber auch um und über unser Spiel, sowie Greenfoot als Programmierumgebung gelernt haben, was dazu geführt hat, dass wir unserem Code immer wieder optimiert, verändert und teilweise komplett "from scratch" neu geschrieben haben. Das führt dazu, dass das Spiel in dieser Alpha nur noch wenig mit dem ersten spielbaren Projekt zu tun hat, was uns aber auch stolz macht, weil es uns zeigt, dass wir an diesem Projekt als "Programmierer" wirklich gewachsen sind und dazu gelernt haben.
