@@ -101,7 +101,7 @@ public void resume ()
 #### Subwelten <a name="subwelten"></a>
 Um den MyWorld-Code etwas aufzuräumen (für interessierte ist der "unordentliche" code unter /code(alt) bei github zu finden), haben wir entschlossen, "subwelten" zur MyWorld für die entsprecheden Spiele einzubauen. Diese subwelten erben alle Eigenschaften und Befehle der myWorld, können aber durch eigene, Spielspezifische Methoden ergänzt werden, was sie zum "aufräumen/ trennen" von Befehlen sehr nützlich macht.
 
-##### Selection
+##### Selection <a name="selection"></a>
 Selection ist die erste und vielleicht wichtigste subwelt, um die wir uns gekümmert haben. Es handelt sich dabei um die "Standardwelt", die aufgerufen wird, wenn man das Spiel öffnet, oder das Spiel zurückgesetzt wird/ beendet wird.
 Ihr Constructor ruft ihre "prepare" Methode auf,
 ```java
@@ -135,8 +135,217 @@ und
 
 ##### FourWins
 Die nächste wichtige Welt ist die FourWins Welt für unser vier gewinnt Spiel. Ihr constructor ist leer.
+Ihre Variabeln sind:
+```java
+    public int[] Feldstatus;
+```
 
-#####
+###### startgame
+die "startgame" Methode wird bei allen myworlds standardmäßig durch den "geerbten" constructor aufgerufen. Sie entfernt bei FourWins zuerst alle vorhandenen Objekte, um eine "saubere" oberfläche zu schaffen.
+dann ruft sie die FourWins Methoden ["startstop"](#startstop) und ["felderbauen"](#felderbauen) ab. 
+```java
+public void startgame() //done
+    {
+        setBackground(new GreenfootImage("viergewinntBackground.png"));
+        List Spiele = getObjects(null);
+        removeObjects(Spiele);
+        startstop ();
+        felderbauen();
+    }
+```
+
+###### startstop <a name="startstop></a>
+startstop ist eine kurze Methode, die die ["pause"](#p&r) ["stop"](#resum) Methoden/Klassen "aktiviert", indem sie die entsprechenden Klassen platziert.
+```java
+private void startstop () //done
+    {
+      stop stop = new stop();
+      addObject(stop,30,30);
+      pause pause = new pause();
+      addObject(pause, 65,30);
+    }
+```
+
+###### felderbauen <a name="felderbauen"></a>
+Die "Felderbauen" Methode "baut" nach dem Prinzip, das wir schon von der [selection](#selection) kennen (Zeile und Spalte) die ["Felder"](#Felder), in denen [Kreis](#Kreis) und [Kreuz](#Kreuz) platziert werden.  
+```java
+private void felderbauen () //done
+    {
+        Feldstatus = new int[36];
+        for ( int r=0; r<36; r++) {
+            int reihe = (int)Math.ceil(r/6);
+            int spalte = r%6 ;
+            Feldstatus [r] = 0 ;
+            Feld Feld = new Feld() ;
+            addObject (Feld,350+spalte*50, 150+reihe*50) ;
+        }
+```
+Außerdem wird für jedes Feld der entsprechende Wert im "Feldstatus"-Array auf 0 gesetzt, was später beim Abfragen des Gewinners sehr wichtig wird.
+
+###### checkWin <a name="checkWin"></a>
+der "checkwin" Befehl ist nur ein zwischenschritt, um den "checkall" befehl durchführen zu können.
+Er verlangt eine feldnummer, die er von irgendeinem anderen actor oder von sich selbst in einer anderen methode "mitgeschickt" bekommt, wenn die checkWin Methode aufgerufen wird. 
+Wird die Methode aufgerufen, überprüft checkWin den Wert des Arrays "Feldstatus" für die gegebene "feldnummer". Genau wie die Feldnummer ist auch der Feldstatus ein integer. 
+checkWin setzt also eine Variable Typ und gibt dieser den Wert aus dem Array Feldstatus für entsprechende feldnummer:
+```java 
+int Typ = Feldstatus[feldnummer] ;
+```
+danach wird mit den Variablen Typ und Feldnummer der Befehl ["checkall"](#checkall) aufgerufen, welcher überprüfen soll, ob ein Spieler gewonnen hat.
+
+```java
+public void checkWin (int feldnummer)
+    {
+        int Typ = Feldstatus[feldnummer] ;
+        //showText("Feld"+feldnummer,100,100) ;
+        checkall(Typ,feldnummer) ;
+    }
+```
+
+###### checkall <a name="checkall"></a>
+checkall ist das Herzstück des vierGewinnt Spiels und funktioniert wie folgt:
+zunächst werden die integer Variablen,
+```java
+int gleicheLinks = 0;
+        int gleicheRechts = 0;
+        int gleicheOben = 0;
+        int gleicheUnten = 0;
+```
+sowie die boolean variablen
+```java
+boolean keinTrefferLinks = false ;
+            boolean keinTrefferRechts = false ;
+            boolean keinTrefferOben = false ;
+            boolean keinTrefferUnten = false ;
+```
+eingeführt.
+Dann soll "checkall" überprüfen, ob ein Spieler gewonnen hat, was durch ein paar einfache Berechnungen passiert:
+Wir haben ja beim platzieren der Felder jedem dieser Felder über das Feldstatus-Array eine Art "Feldstatus" Wert zugewiesen, der default bei 0 liegt. In der [Felder Klasse](#Felder) wird dieser Wert, je nachdem ob ein kreis oder ein Kreuz gesetzt wird, auf 1 oder 2 gesetzt und danach die "checkwin"-Methode mit der EIGENEN Feldnummer des entsprechenden Feldes aufgerufen. Dieser wiederum ruft mit dem Feldtatus (Typ) und der feldnummer als 2 integer variablen die checkall methode auf.
+```java
+private void checkall (int Typ, int feldnummer)
+```
+In einer for- schleife wird nun für unterschiedliche "n" werte berechnet, ob in den nachbarfeldern genügend GLEICHE objekte (also kreis oder Kreuz) vorhanden sind, damit ein Spieler gewonnen hat. Da die Berechnungen sehr lang sind und sich von den Befehlen kaum unterscheiden, hier (nur) ein Beispiel, wie überprüft wird, ob die Objekte rechts "gleich" sind. 
+(die method ist hier auseinandergenommen, um das erklären übersichtlicher zu machen. Im ganzen zu finden ist sie [hier](#ganzemethod), "..." steht für ausgelassene zeilen.)
+
+```java
+for(int n=1; n<5; n++)
+        {
+            if(Math.ceil(feldnummer/6) == Math.ceil((feldnummer+n)/6))
+            ...
+            else
+            {
+                        keinTrefferRechts = true ;
+            }
+```
+zuerst wird der for loop mit werten für n von 1 - 5 gestartet. Die erste if schleife prüft, ob die feldnummer, die den Befehl aufgerufen hat in der gleichen Zeile liegt, wie die feldnummer+n, also plus 1,2,3 usw. ist das der fall, wird eine weitere if schleife ausgeführt. wenn nicht, wird die boolean-abfrage "keinetrefferrechts" auf true gesetzt.
+
+Besagte weitere if schleife überprüft, ob der feldstatus, vom feld rechts, also feldnummer+n auch der gleiche ist, wie Typ, also der gleiche feldtatus, den das aufrufende Feld auch hatte, als wir es mit checkwin abgefragt haben. Wenn ja, dann wird gleicheRechts um 1 erhöht und die schleife gestoppt. Wennn nicht, wird "keinetrefferrechts" auf true gesetzt.
+```java
+if(Feldstatus[feldnummer+n] == Typ)
+                    {
+                        gleicheRechts ++ ;
+                        if(gleicheRechts + gleicheLinks>=3)
+                        {
+                            whoWins(Typ) ;
+                            break ;
+                        }
+                    }
+```
+Außerdem wird noch überprüft, ob gleichelinks und gleiche rechts zusammen größer als 3, also mindestens 4 sind. Denn wenn das zutrifft, hat ein Spieler gewonnen. Es wird dann die [whoWins](#whowins) Methode mit (Typ) als integer abgerufen, die feststellt, welcher Spieler gewonnen hat und dementsrechend eine Aktion ausführt. Weil die berechnungen mathematisch alle sehr ähnlich sind, werden sie hier nicht weiter vertieft. Bei Interesse ist der gesamte Code im master unter "Wap bap 2.1" hinterlegt.
+
+
+kompletter code(für Berechnung treffer rechts): <a name=ganzemethod></a>
+```java
+for(int n=1; n<5; n++)
+        {
+            if(Math.ceil(feldnummer/6) == Math.ceil((feldnummer+n)/6))
+            {
+                if(feldnummer+n >= 0 && feldnummer+n < Feldstatus.length)
+                {
+                    if(Feldstatus[feldnummer+n] == Typ)
+                    {
+                        gleicheRechts ++ ;
+                        if(gleicheRechts + gleicheLinks>=3)
+                        {
+                            whoWins(Typ) ;
+                            break ;
+                        }
+                    }
+                    else
+                    {
+                        keinTrefferRechts = true ;
+                    }
+                }
+            }
+            else
+            {
+                keinTrefferRechts = true ;
+            }
+```
+
+##### whoWins <a name="whowins"></a>
+Whowins berechnet mit einer einfachen Abfrage, ob die zahl des gewinners gerade oder ungerade (also 1 oder 2) ist, um zu prüfen ob "Typ" aus Checkwin für kreise oder kreuze stand und führt entsprechend [KreisWin](#Kreiswin) oder [KreuzWin](#KreuzWin) aus.
+```java
+private void whoWins(int x) //done
+    {
+        if (x%2 == 0)
+        {
+            KroizWin() ;
+        }
+        else 
+        {
+            KriasWin() ;
+        }
+    }
+```
+
+
+##### KreisWin / Kreuwin 
+kreiwin und Kreuzwin funktionieren sehr ähnlich. Werden sie aufgerufen, entfernen sie alle Objekte in der Welt, setzen den Hintergrund auf ein Bild, welches anzeigt, dass die entsprechende Klasse gewonnnen hat, um dann den ["reset"](#reset) Befehl auszuführen.
+```java
+public void KroizWin ()
+    {
+       Greenfoot.delay(10) ;
+        List Alles = getObjects(null);
+       removeObjects(Alles); 
+       setBackground("XWINS.png") ;
+       Greenfoot.delay(500) ;
+       reset () ;
+    }
+    
+    public void KriasWin()
+    {
+       Greenfoot.delay(10);
+       List Alles = getObjects(null);
+       removeObjects(Alles); 
+       setBackground("OWINS.png") ;
+       Greenfoot.delay(500) ;
+       reset () ;
+    }
+```
+#### placeholder
+placeholder ist eine "lückenfüller" Welt für die Spiele, die noch nicht programmiert wurden. Wird sie von der Spielauswahl aufgerufen, führt sie genau wie die anderen Spielewelten den "startgame" befehl aus, dieser besteht aber daraus, den Spieler darauf zu verweisen, dass das Spiel noch nicht programmiert wurde. Klickt der Spieler mit der Maus, gelangt er ins Startmenü zurück, die reset() methode aus MyWorld wird dann nämlich aufgerufen.
+```java
+public void startgame()
+    {
+        setBackground(new GreenfootImage("einfachRot.png"));
+        showText("Sorry, dieses Spiel wurde noch nicht programmiert... :(",500,320);
+        showText("Klicke, um wieder ins Menü zu gelangen",500,400);
+    }
+    
+    public void act()
+    {
+        if(Greenfoot.mouseClicked(null))
+        {
+            reset();
+        }
+    }
+```
+
+
+### Feld <a name=Felder"></a>
+  Feld ist die "Spielfeldklasse von viergewinnt. Sie wird von der ["felderbauen"](#felderbauen) Methode in der ["selection"](#selection) Subwelt platziert.
+Variabeln:
+### Kreuz
 
 ### Spielauswahl <a name="spielauswahl"></a>
 Die Spielauswahl- Objekte befinden sich beim Starten der Spielesammlung in der [MyWorld](#myWorld). Ihre act-Method ist relativ simpel gehalten. Klickt man ein "Spielauswahl" - Objekt an, berechnet es über seine Koordiante, um welches spiel es sich handelt, um dann die Welt(#subwelten) für das entsprechende Spiel zu setzen.
@@ -218,7 +427,7 @@ public void act()
             ((MyWorld)getWorld()).pause() ;
         }
 ```
-### resume
+### resume <a name="resum"></a>
 resume verhält sich als klasse sehr ähnlich der "pause" klasse. Wird sie angeklickt, führt sie in der MyWorld die ["resume"](#resume) methode aus.
 
 ### stop
