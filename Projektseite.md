@@ -13,11 +13,21 @@ Dies ist die Projektseite zu "Wap Bap 2", erstellt von Lotta L. und Felix Herrma
 
 ## Übersicht:
 
- ###  1. [Einführung](#1)
- ###  2. [Idee](#idee)
+ ### 1. [Einführung](#1)
+ ### 2. [Idee](#idee)
  ### 3. [Code](#code)
- ####  3.1 [MyWorld](#myworld)
- ####  3.2 
+ #### 3.1 [MyWorld](#myworld)
+ ##### 3.1.1 [reset](#reset)
+ ##### 3.1.2 [pause & resume](#pause)
+ ##### 3.1.3 [Subwelten](#subwelten)
+ ###### 3.1.3.1 [Selection](#selection)
+ ###### 3.1.3.2 [fourWins](#fourWins)
+ ###### 3.1.3.3 [placeholder](#placeholder)
+ #### 3.2 [Spielauswahl](#spielauswahl)
+ #### 3.3 [pause](#pause)
+ #### 3.4 [resume](#resume)
+ #### 3.5 [stop](#stopstop)
+ #### 3.6 [Kreis/Kreuz](#Kreiskreuz)
  ###  4. [Entwicklung](#entwicklung)
  ### 5. [Ziele](#ziele)
 
@@ -26,10 +36,8 @@ Dies ist die Projektseite zu "Wap Bap 2", erstellt von Lotta L. und Felix Herrma
 Die Idee für die Spielesammlung war, die Greenfoot und Java- Kenntnisse, die wir uns in unserem ersten Informatikprojekt 
 ["Fischi von Kla"](https://github.com/feta-herrner/Fischi-von-Kla/?target=_blank) angeeignet hatten anzuwenden, um ein größeres, komplexeres Projekt in Greenfoot zu gestalten. Während wir mit "Fischi von Kla" relativ erfolgreich, ein einzelnes, für sich stehendes Spiel programmiert hatten, wollten wir mit "Wap Bap 2 den nächsten Schritt gehen, indem wir eine ganze Sammlung an Spielen schreiben. Begonnen haben wir mit "vier gewinnt" oder "vier in einer Reihe" und der generellen Umgebung zur Spielauswahl- und pausierung, um diese nach und nach um weitere Spiele erweitern zu können...
 
-Später kam uns auch die Idee, unser bereits existierendes Spiel "Fischi von Kla" in leicht verbesserter und erweiterter Form in die Spielesammlung als "Einzelspiel" zu integrieren. Ein Spiel aus einer anderen Greenfoot "Umgebung" in unsere Spielesammlung zu übernehmen stellte sich für uns aber mit steigendem Wissensstand als komplizierter heraus, als gedacht. Wir hätten dafür den Code von Fischi komplett überarbeiten müssen, dazu kam, dass Fischi als unser erstes Java/ Greenfoot- Projekt noch sehr unaufgeräumt und einfach "drauf los" programmiert war, weshalb wir mit der Zeit Abstand von der Idee genommen haben, unseren alten Code "1 on 1" mit einzukopieren. Weil wir aber wissen, wie sehr unsere Fans ihren Fischi lieben, spielen wir mit dem Gedanken, Fischi in optimierter Form und vielleicht auch dem einen oder anderen neuen Feature zurückzubringen und in unsere Spielesammlung zu integrieren. 
+Später kam uns auch die Idee, unser bereits existierendes Spiel "Fischi von Kla" in leicht verbesserter und erweiterter Form in die Spielesammlung als "Einzelspiel" zu integrieren. Ein Spiel aus einer anderen Greenfoot "Umgebung" in unsere Spielesammlung zu übernehmen stellte sich für uns aber mit steigendem Wissensstand als komplizierter heraus, als gedacht. Wir hätten dafür den Code von Fischi komplett überarbeiten müssen, dazu kam, dass Fischi als unser erstes Java/ Greenfoot- Projekt noch sehr unaufgeräumt und einfach "drauf los" programmiert war, weshalb wir mit der Zeit Abstand von der Idee genommen haben, unseren alten Code "1 on 1" mit einzukopieren. Weil wir aber wissen, wie sehr unsere Fans ihren Fischi lieben, spielen wir mit dem Gedanken, Fischi in optimierter Form und vielleicht auch dem einen oder anderen neuen Feature zurückzubringen und in unsere Spielesammlung zu integrieren.
 
-## Texturen
-- arbeit uin gimp, viele texturen komplett alleine erstellt.
 
 ## Code
 
@@ -60,7 +68,7 @@ Den prepare-Befehl, den Greenfoot standardmäßig in allen Welten einbaut, haben
 Mehr dazu unter [Subwelten](#subwelten)
 
 
-#### reset
+#### reset <a name="reset"></a>
 Die "reset" Methode wird von einer der ["Spielewelten"](#Spielewelten) aufgerufen, wenn ein Spiel beendet wurde. Sie setzt die aktuelle Welt auf die [Spielauswahl-welt("selection")](#selection) zurück.
 ```java
 public void reset () 
@@ -130,7 +138,7 @@ int reihe = (int)Math.ceil(s/4) ;
 und 
 "%" die spalte, also 1,2,3 oder 4.
 
-##### FourWins
+##### FourWins <a name="fourWins></a>
 Die nächste wichtige Welt ist die FourWins Welt für unser vier gewinnt Spiel. Ihr constructor ist leer.
 Ihre Variabeln sind:
 ```java
@@ -319,7 +327,7 @@ public void KroizWin ()
        reset () ;
     }
 ```
-#### placeholder
+#### placeholder <a name=placeholder></a>
 placeholder ist eine "lückenfüller" Welt für die Spiele, die noch nicht programmiert wurden. Wird sie von der Spielauswahl aufgerufen, führt sie genau wie die anderen Spielewelten den "startgame" befehl aus, dieser besteht aber daraus, den Spieler darauf zu verweisen, dass das Spiel noch nicht programmiert wurde. Klickt der Spieler mit der Maus, gelangt er ins Startmenü zurück, die reset() methode aus MyWorld wird dann nämlich aufgerufen.
 ```java
 public void startgame()
@@ -359,7 +367,7 @@ public Feld ()
         spielzuge=1;
     }
 ```
-###### act
+###### act 
 die act-methode von Felder ruft die methoden ["spielen"](#spielenfelder), ["cheats"](#cheats) und ["whoischeating"](#whoischeating) auf.
 ```java
 public void act() 
@@ -556,7 +564,7 @@ public void act()
 ### resume <a name="resum"></a>
 resume verhält sich als klasse sehr ähnlich der "pause" klasse. Wird sie angeklickt, führt sie in der MyWorld die ["resume"](#resume) methode aus.
 
-### stop
+### stop <a name=stopstop></a>
 "stop" funktioniert ähnlich wie "resume" und "pause". Wird es geklickt, pasuiert es aber nicht, sondern ruft die Welt-methode ["reset"](#reset) auf.
 ```java
 public void act() 
@@ -568,7 +576,7 @@ public void act()
     }
 ```
 
-### Kreis / Kreuz
+### Kreis / Kreuz <a name=kreiskreuz"></a>
 Kreis und Kreuz werden in die Felder platziert, sie sind grafische Elemente, weshalb sich ihr code auf das skalieren ihres Bildes beschränkt.
 Kreis:
 ```java
@@ -587,7 +595,7 @@ public Kroiz () {
         }
 ```
 
-## Entwicklung
+## Entwicklung a name="Entwicklung"></a>
 Unser Spielesammlung "Wap Bap" hat in ihrem knappen halben Jahr, die sie nun in der Entwicklungen viele Stadien durchlaufen, von denen wir in diesem alpha-release noch Fragmente auskommentiert im Code gelassen haben, welche bei der Endveröffentlichung entfernt werden werden. So wurde ursprünglich beispielsweise jedes Feld im "vier gewinnt"-Spiel als einzelne Subklasse generiert, was sehr viel Spaghetti-code nach sich zog. Das besondere an diesem Projekt war, dass wir als Entwickler auf der Reise sehr viel von, aber auch um und über unser Spiel, sowie Greenfoot als Programmierumgebung gelernt haben, was dazu geführt hat, dass wir unserem Code immer wieder optimiert, verändert und teilweise komplett "from scratch" neu geschrieben haben. Das führt dazu, dass das Spiel in dieser Alpha nur noch wenig mit dem ersten spielbaren Projekt zu tun hat, was uns aber auch stolz macht, weil es uns zeigt, dass wir an diesem Projekt als "Programmierer" wirklich gewachsen sind und dazu gelernt haben.
 
 Hier ein Beispiel, wie unser "Felderbauen" aussah, bevor wir es optimiert haben:
@@ -597,6 +605,6 @@ optimiert sah das ganze dann so aus, mit den gleichen Eigenschaften im Spiel sel
 
  <img src="https://user-images.githubusercontent.com/54102146/79449223-21d2fa80-7fe3-11ea-946b-65d36c7c0184.png" width="300">
 
-## Ziele
+## Ziele <a name="Ziele"></a>
 - weitere Spiele hobbymäßig hinzufügen.
 - port auf eine andere "Plattform"/ einen anderen compiler?
