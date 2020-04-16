@@ -30,11 +30,11 @@ Später kam uns auch die Idee, unser bereits existierendes Spiel "Fischi von Kla
 
 ## Texturen
 - arbeit uin gimp, viele texturen komplett alleine erstellt.
+
 ## Code
 
-
 ### MyWorld
-Die Welt (in unserem Falle default "myWorld") ist in Greenfoot der Grundbaustein, auf dem das Programm aufbaut. In ihr bewegen sich die Objekte und "acten". Jedes Objekt wird im constructor durch die "prepare" methode dort mit einer Koordinate platziert, um dann in Dauerschleife seine "act" methode asuzuführen. Es kann mehrere Welten geben, MyWorld ist in unserem Projekt die Standardwelt, deren constructor durch das klicken von "run" aufgerufen wird.
+Die Welt (in unserem Falle default "selection") ist in Greenfoot der Grundbaustein, auf dem das Programm aufbaut. In ihr bewegen sich die Objekte und "acten". Jedes Objekt wird im constructor durch die "prepare" methode dort mit einer Koordinate platziert, um dann in Dauerschleife seine "act" methode asuzuführen. Es kann mehrere Welten geben, selection ist in unserem Projekt die Standardwelt, deren constructor durch das klicken von "run" aufgerufen wird.
 
 ```java
 public MyWorld()
@@ -374,7 +374,107 @@ public void act()
 ```
 
 ###### spielen <a name="spielenfelder"></a> 
+wenn ein Feld "spielen" abruft, berechnet es zuerst seine koordinaten und speichert diese in den lokalen variablen x und y:
+```java
+FourWins Welt = (FourWins) getWorld();
+        int x = (getX() -350) / 50;
+        int y = (getY() -150) / 50;
+```
+Außerdem läuft eine if schleife die, wenn ein Feld-Objekt angeklickt wird UND die limit-integer variable den wert 0 hat, je nachdem, ob "Spielzuge" variable gerade oder ungerade ist, also immer abwechselnd einen Kreis und ein Kreuz in das entsprechende Feld setzt. Die Limit variable wird dann erhöht, damit jedes Feld nur einmal bespielt werden kann. Außerdem wird, je nachdem,  ob ein kreis oder kreuz gesetzt wurde der fedstatus des felds geändert und die [checkwin](#checkwin) methode mit der koordinate des feldes (feldnummer) aufgerufen.
 
+```java
+public void spielen () {
+        FourWins Welt = (FourWins) getWorld();
+        int x = (getX() -350) / 50;
+        int y = (getY() -150) / 50;
+        if (Greenfoot.mouseClicked(this)) 
+        {
+            if (limit==0)
+            {
+                if ( spielzuge % 2 == 0 ) 
+                {
+                    spielzuge +=1 ;
+                    getWorld().addObject(new Krias(), getX(), getY()) ;
+                    limit ++ ;
+                    Welt.Feldstatus[x+6*y] = 1;
+                    //Welt.showText(""+limit,500,500) ;
+                }
+                else if ((Greenfoot.mouseClicked(this))) 
+                {
+                    getWorld().addObject(new Kroiz(), getX(), getY()) ;
+                    spielzuge +=1;
+                    limit ++ ;
+                    Welt.Feldstatus[x+6*y] = 2;
+                }
+            }
+            Welt.checkWin(x+6*y) ;
+        }
+    }
+```
+
+###### cheats
+cheats ist eine Methode, die wir zuhause aus Spaß noch mit eingebaut haben. Da sie für das Spiel eigentlich nicht von Bedeutung ist und es auch gut sein kann, dass wir sie später wieder entfernen hier die kurzfassung:
+Wenn man eine Gewisse kombination von Tasten, die im "cheat" array gespeichert sind in der richtigen Reihenfolge eingibt und man durch "whoischeating":
+```java 
+public void whoischeating ()
+    {
+        MyWorld Welt = (MyWorld) getWorld();
+        if (Greenfoot.isKeyDown("1"))
+        {
+            cheater = 1 ;
+            Welt.addObject(new start(),100,100) ;
+            Greenfoot.delay(1) ;
+            Welt.removeObjects(Welt.getObjects(start.class)) ;
+        }
+        else if (Greenfoot.isKeyDown("2"))
+        {
+            cheater = 2 ;
+            Welt.addObject(new start(),100,100) ;
+            Greenfoot.delay(1) ;
+            Welt.removeObjects(Welt.getObjects(start.class)) ;
+        }
+    }
+```
+mit dem drücken von 1 oder 2 bestimmt hat, wer durch die cheats gewinnen soll, gibt das spiel diesen spieler als Sieger aus und ein lachen ertönt
+```java
+private void cheats (int xy) 
+    {
+            FourWins Welt = (FourWins) getWorld();
+            //if (Greenfoot.isKeyDown(""))
+            String key = Greenfoot.getKey();
+            if (key != null)
+            {
+                if (cheat[cheatdepth].equals(key))
+                {
+                    cheatdepth++;
+                    Welt.addObject(new start(),100,100) ;
+                    Greenfoot.delay(1) ;
+                    Welt.removeObjects(Welt.getObjects(start.class)) ;
+                    if (cheatdepth == cheat.length)
+                    {
+                        Welt.bibisLachen.playLoop() ;
+                        Greenfoot.delay(70) ;
+                        //if(lachTimer==0) {
+                        if (xy == 1)
+                        {
+                            Welt.KroizWin () ;
+                            Welt.bibisLachen.pause() ;
+                        }
+                        else if (xy ==2) 
+                        {
+                            Welt.KriasWin () ;
+                            Welt.bibisLachen.pause() ;
+                        }
+                      //}
+                      //else lachTimer -=1 ;
+                    }
+                }
+                else
+                {
+                    cheatdepth = 0 ;
+                }
+            }
+```
 
 ### Spielauswahl <a name="spielauswahl"></a>
 Die Spielauswahl- Objekte befinden sich beim Starten der Spielesammlung in der [MyWorld](#myWorld). Ihre act-Method ist relativ simpel gehalten. Klickt man ein "Spielauswahl" - Objekt an, berechnet es über seine Koordiante, um welches spiel es sich handelt, um dann die Welt(#subwelten) für das entsprechende Spiel zu setzen.
@@ -460,6 +560,35 @@ public void act()
 resume verhält sich als klasse sehr ähnlich der "pause" klasse. Wird sie angeklickt, führt sie in der MyWorld die ["resume"](#resume) methode aus.
 
 ### stop
+"stop" funktioniert ähnlich wie "resume" und "pause". Wird es geklickt, pasuiert es aber nicht, sondern ruft die Welt-methode ["reset"](#reset) auf.
+```java
+public void act() 
+    {
+        if (Greenfoot.mouseClicked(this)) 
+        {
+           ((MyWorld)getWorld()).reset() ;
+        }    
+    }
+```
+
+### Kreis / Kreuz
+Kreis und Kreuz werden in die Felder platziert, sie sind grafische Elemente, weshalb sich ihr code auf das skalieren ihres Bildes beschränkt.
+Kreis:
+```java
+public Krias () {
+            GreenfootImage image = getImage () ;
+            image.scale(image.getWidth() -445, image.getHeight() -445) ;
+            setImage (image) ;
+        }
+```
+Kreuz:
+```java
+public Kroiz () {
+            GreenfootImage image = getImage () ;
+            image.scale(image.getWidth() -943, image.getHeight() -943) ;
+            setImage (image) ;
+        }
+```
 
 ## Entwicklung
 Unser Spielesammlung "Wap Bap" hat in ihrem knappen halben Jahr, die sie nun in der Entwicklungen viele Stadien durchlaufen, von denen wir in diesem alpha-release noch Fragmente auskommentiert im Code gelassen haben, welche bei der Endveröffentlichung entfernt werden werden. So wurde ursprünglich beispielsweise jedes Feld im "vier gewinnt"-Spiel als einzelne Subklasse generiert, was sehr viel Spaghetti-code nach sich zog. Das besondere an diesem Projekt war, dass wir als Entwickler auf der Reise sehr viel von, aber auch um und über unser Spiel, sowie Greenfoot als Programmierumgebung gelernt haben, was dazu geführt hat, dass wir unserem Code immer wieder optimiert, verändert und teilweise komplett "from scratch" neu geschrieben haben. Das führt dazu, dass das Spiel in dieser Alpha nur noch wenig mit dem ersten spielbaren Projekt zu tun hat, was uns aber auch stolz macht, weil es uns zeigt, dass wir an diesem Projekt als "Programmierer" wirklich gewachsen sind und dazu gelernt haben.
@@ -474,5 +603,3 @@ optimiert sah das ganze dann so aus, mit den gleichen Eigenschaften im Spiel sel
 ## Ziele
 - weitere Spiele hobbymäßig hinzufügen.
 - port auf eine andere "Plattform"/ einen anderen compiler?
-
-###
