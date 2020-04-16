@@ -548,10 +548,6 @@ public pause ()
             setImage (image) ;
         }
 ```
-so sieht es dann aus:
-
-<img src="https://user-images.githubusercontent.com/54102146/79462290-9021b800-7ff7-11ea-9ba9-9aa8e9565b90.png" width="200">
-
 Der key zur pause Klasse liegt aber in ihrer act methode, welche in der MyWorld nämlich die ["pause"](#pause) methode ausführt, wenn sie angeklickt wird:
 ```java
 public void act() 
