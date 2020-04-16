@@ -52,8 +52,32 @@ Im Spiel sieht das dann so aus:
 
 Wenn man das entsprechende Spiel dann anklickt, berechnet das Objekt über seine Koordinate, um welches Spiel es sich handelt und startet dieses. (siehe [Spielauswahl](#spielauswahl).)
 
-###### startgame <a name=startgame></a>
-
+##### startgame <a name=startgame></a>
+bei der "startgame"-method handelt es sich um 
+```java
+public void startgame (int gamenumber) 
+    {
+        if(gamenumber == 0)
+        {
+            startvierGewinnt() ;
+        }
+        for (int t=1; t<8; t++)
+        {
+            if (gamenumber == t) 
+            {
+                setBackground(new GreenfootImage("einfachRot.png"));
+                List Spiele = getObjects(null);
+                removeObjects(Spiele);
+                showText("Sorry, Spiel Nummer "+(t+1),500,300) ;
+                showText("wurde noch nicht programmiert... :(",500,320) ;
+                Greenfoot.delay(300) ;
+                showText("",500,300) ;
+                showText("",500,320) ;
+                reset() ;
+            }
+        }
+    }
+```
 
 #### Spielauswahl <a name="spielauswahl"></a>
 Die Spielauswahl- Objekte befinden sich beim Starten der Spielesammlung in der [MyWorld](#myWorld). Ihre act-Method ist relativ simpel gehalten. Klickt man ein "Spielauswahl" - Objekt an, berechnet es über seine Koordiante, um welches spiel es sich handelt, um dann die [Welt.startgame](#startgame)-methode mit der entsprechenden Nummer aufzurufen.
