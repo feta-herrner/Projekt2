@@ -66,7 +66,7 @@ Mehr dazu unter [Subwelten](#subwelten)
 #### reset
 Die "reset" Methode wird von einer der ["Spielewelten"](#Spielewelten) aufgerufen, wenn ein Spiel beendet wurde. Sie setzt die aktuelle Welt auf die [Spielauswahl-welt("selection")](#selection) zurück.
 ```java
-public void reset () //done
+public void reset () 
     {
         Greenfoot.setWorld(new Selection());
     }
@@ -144,7 +144,7 @@ Ihre Variabeln sind:
 die "startgame" Methode wird bei allen myworlds standardmäßig durch den "geerbten" constructor aufgerufen. Sie entfernt bei FourWins zuerst alle vorhandenen Objekte, um eine "saubere" oberfläche zu schaffen.
 dann ruft sie die FourWins Methoden ["startstop"](#startstop) und ["felderbauen"](#felderbauen) ab. 
 ```java
-public void startgame() //done
+public void startgame() 
     {
         setBackground(new GreenfootImage("viergewinntBackground.png"));
         List Spiele = getObjects(null);
@@ -154,10 +154,10 @@ public void startgame() //done
     }
 ```
 
-###### startstop <a name="startstop></a>
+###### startstop <a name="startstop"></a>
 startstop ist eine kurze Methode, die die ["pause"](#p&r) ["stop"](#resum) Methoden/Klassen "aktiviert", indem sie die entsprechenden Klassen platziert.
 ```java
-private void startstop () //done
+private void startstop () 
     {
       stop stop = new stop();
       addObject(stop,30,30);
@@ -169,7 +169,7 @@ private void startstop () //done
 ###### felderbauen <a name="felderbauen"></a>
 Die "Felderbauen" Methode "baut" nach dem Prinzip, das wir schon von der [selection](#selection) kennen (Zeile und Spalte) die ["Felder"](#Felder), in denen [Kreis](#Kreis) und [Kreuz](#Kreuz) platziert werden.  
 ```java
-private void felderbauen () //done
+private void felderbauen () 
     {
         Feldstatus = new int[36];
         for ( int r=0; r<36; r++) {
@@ -285,7 +285,7 @@ for(int n=1; n<5; n++)
 ###### whoWins <a name="whowins"></a>
 Whowins berechnet mit einer einfachen Abfrage, ob die zahl des gewinners gerade oder ungerade (also 1 oder 2) ist, um zu prüfen ob "Typ" aus Checkwin für kreise oder kreuze stand und führt entsprechend [KreisWin](#Kreiswin) oder [KreuzWin](#KreuzWin) aus.
 ```java
-private void whoWins(int x) //done
+private void whoWins(int x) 
     {
         if (x%2 == 0)
         {
