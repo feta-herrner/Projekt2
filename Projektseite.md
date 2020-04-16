@@ -121,7 +121,7 @@ public Spielauswahl(GreenfootImage image, String name)
     }
 ```
 
-##### pause & resume
+##### pause & resume <a name="pause"></a>
 pause und resume sind Befehle, die von Objekten der [pause & resume](#p&r) Klassen aufgerufen werden können. Der pause-Befehl fügt dem laufenden Spiel ein "pause" und ein "resume" Objekt hinzu, welche die anderen Objekte überdecken und dafür sorgen, dass mit diesen erst wieder interagiert werden kann, wenn sie entfernt wurden.
 Im Code:
 ```java
@@ -135,9 +135,10 @@ public void pause ()
 ```
 
 Im Spiel:
+
 <img src="https://user-images.githubusercontent.com/54102146/79461698-cd397a80-7ff6-11ea-9875-502d590c1c0d.png" width="200">
 
-der resume befehl entfernt die betreffenden Objekte wieder:
+der resume befehl entfernt die betreffenden Objekte wieder: <a name="resume"></a>
 ```java
 public void resume ()
     {
@@ -173,7 +174,7 @@ public Spielauswahl(GreenfootImage image, String name)
     }
 ```
 
-#### pause
+#### pause <a name=p&r></a>
 "pause" ist eine relativ simple klasse, die dem Spieler die Möglichkeit geben soll, das laufende Spiel zu pausieren. Ihr constructor ist nur für die skalierung des Bildes zuständig, bei welchem es sich klassisch um eine Art "stop" zeichen handelt. Dieses haben wir selsbt in Gimp erstellt.
 ```java
 public pause () 
@@ -183,12 +184,23 @@ public pause ()
             setImage (image) ;
         }
 ```
+so sieht es dann aus:
 
 <img src="https://user-images.githubusercontent.com/54102146/79462290-9021b800-7ff7-11ea-9ba9-9aa8e9565b90.png" width="200">
 
+Der key zur pause Klasse liegt aber in ihrer act methode, welche in der MyWorld nämlich die ["pause"](#pause) methode ausführt, wenn sie angeklickt wird:
+```java
+public void act() 
+    {
+        if (Greenfoot.mouseClicked(this))
+        {
+            ((MyWorld)getWorld()).pause() ;
+        }
+```
 #### resume
+resume verhält sich als klasse sehr ähnlich der "pause" klasse. Wird sie angeklickt, führt sie in der MyWorld die ["resume"](#resume) methode aus.
 
-
+#### stop
 
 ### Entwicklung
 Unser Spielesammlung "Wap Bap" hat in ihrem knappen halben Jahr, die sie nun in der Entwicklungen viele Stadien durchlaufen, von denen wir in diesem alpha-release noch Fragmente auskommentiert im Code gelassen haben, welche bei der Endveröffentlichung entfernt werden werden. So wurde ursprünglich beispielsweise jedes Feld im "vier gewinnt"-Spiel als einzelne Subklasse generiert, was sehr viel Spaghetti-code nach sich zog. Das besondere an diesem Projekt war, dass wir als Entwickler auf der Reise sehr viel von, aber auch um und über unser Spiel, sowie Greenfoot als Programmierumgebung gelernt haben, was dazu geführt hat, dass wir unserem Code immer wieder optimiert, verändert und teilweise komplett "from scratch" neu geschrieben haben. Das führt dazu, dass das Spiel in dieser Alpha nur noch wenig mit dem ersten spielbaren Projekt zu tun hat, was uns aber auch stolz macht, weil es uns zeigt, dass wir an diesem Projekt als "Programmierer" wirklich gewachsen sind und dazu gelernt haben.
