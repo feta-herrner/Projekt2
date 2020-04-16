@@ -110,6 +110,42 @@ public void startgame (int gamenumber)
     }
 ```
 
+##### reset
+Die "reset" Methode wird von einer der ["Spielewelten"](#Spielewelten) aufgerufen, wenn ein Spiel beendet wurde. Sie löscht alle Objekte in der Welt und setzt denn Hintergrund auf den Standard zurück. Danach wird der prepare Befehl aufgerufen, um eine "frische" Spielesammlung zu öffnen.
+```java
+public Spielauswahl(GreenfootImage image, String name)
+    {
+        Name = name;
+        image.scale(image.getWidth() -530, image.getHeight() -530) ;
+        setImage (image);
+    }
+```
+
+##### pause & resume
+pause und resume sind Befehle, die von Objekten der [pause & resume](#p&r) Klassen aufgerufen werden können. Der pause-Befehl fügt dem laufenden Spiel ein "pause" und ein "resume" Objekt hinzu, welche die anderen Objekte überdecken und dafür sorgen, dass mit diesen erst wieder interagiert werden kann, wenn sie entfernt wurden.
+Im Code:
+```java
+public void pause ()
+    {
+        pausiert pausiert = new pausiert();
+        addObject(pausiert,500,300);
+        resume resume = new resume();
+        addObject(resume,500,350);
+    }
+```
+
+Im Spiel:
+<img src="https://user-images.githubusercontent.com/54102146/79461698-cd397a80-7ff6-11ea-9875-502d590c1c0d.png" width="200">
+
+der resume befehl entfernt die betreffenden Objekte wieder:
+```java
+public void resume ()
+    {
+        removeObjects(getObjects(pausiert.class));
+        removeObjects(getObjects(resume.class));
+    }
+```
+
 #### Spielauswahl <a name="spielauswahl"></a>
 Die Spielauswahl- Objekte befinden sich beim Starten der Spielesammlung in der [MyWorld](#myWorld). Ihre act-Method ist relativ simpel gehalten. Klickt man ein "Spielauswahl" - Objekt an, berechnet es über seine Koordiante, um welches spiel es sich handelt, um dann die [Welt.startgame](#startgame)-methode mit der entsprechenden Nummer aufzurufen.
 ```java
@@ -136,8 +172,23 @@ public Spielauswahl(GreenfootImage image, String name)
         setImage (image);
     }
 ```
-#### Spiele <a name="spiele"></a>
--konstruktoren für einzelne Spiele
+
+#### pause
+"pause" ist eine relativ simple klasse, die dem Spieler die Möglichkeit geben soll, das laufende Spiel zu pausieren. Ihr constructor ist nur für die skalierung des Bildes zuständig, bei welchem es sich klassisch um eine Art "stop" zeichen handelt. Dieses haben wir selsbt in Gimp erstellt.
+```java
+public pause () 
+        {
+            GreenfootImage image = getImage () ;
+            image.scale(image.getWidth() -13, image.getHeight() -30) ;
+            setImage (image) ;
+        }
+```
+
+<img src="https://user-images.githubusercontent.com/54102146/79462290-9021b800-7ff7-11ea-9ba9-9aa8e9565b90.png" width="200">
+
+#### resume
+
+
 
 ### Entwicklung
 Unser Spielesammlung "Wap Bap" hat in ihrem knappen halben Jahr, die sie nun in der Entwicklungen viele Stadien durchlaufen, von denen wir in diesem alpha-release noch Fragmente auskommentiert im Code gelassen haben, welche bei der Endveröffentlichung entfernt werden werden. So wurde ursprünglich beispielsweise jedes Feld im "vier gewinnt"-Spiel als einzelne Subklasse generiert, was sehr viel Spaghetti-code nach sich zog. Das besondere an diesem Projekt war, dass wir als Entwickler auf der Reise sehr viel von, aber auch um und über unser Spiel, sowie Greenfoot als Programmierumgebung gelernt haben, was dazu geführt hat, dass wir unserem Code immer wieder optimiert, verändert und teilweise komplett "from scratch" neu geschrieben haben. Das führt dazu, dass das Spiel in dieser Alpha nur noch wenig mit dem ersten spielbaren Projekt zu tun hat, was uns aber auch stolz macht, weil es uns zeigt, dass wir an diesem Projekt als "Programmierer" wirklich gewachsen sind und dazu gelernt haben.
