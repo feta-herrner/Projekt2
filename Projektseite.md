@@ -1,6 +1,6 @@
-## Informatikprojekt: Wap Bap 2
+# Informatikprojekt: Wap Bap 2
 
-### Einführung <a name="1"></a>
+## Einführung <a name="1"></a>
 Dies ist die Projektseite zu "Wap Bap 2", erstellt von Lotta L. und Felix Herrmann im Rahmen des Informatikunterrichts. Bei "Wap Bap" 2 handelt es sich um eine in Greenfoot erstellte Spielesammlung.
 
 
@@ -11,29 +11,29 @@ Dies ist die Projektseite zu "Wap Bap 2", erstellt von Lotta L. und Felix Herrma
   
   </details>
 
-### Übersicht:
+## Übersicht:
 
- ####  1. [Einführung](#1)
- ####  2. [Idee](#idee)
- ####  3. [Code](#code)
- #####  3.1 [MyWorld](#myworld)
- #####  3.2 
- ####  4. [Entwicklung](#entwicklung)
- #### 5. [Ziele](#ziele)
+ ### 1. [Einführung](#1)
+ ###  2. [Idee](#idee)
+ #### 3. [Code](#code)
+ ####  3.1 [MyWorld](#myworld)
+ ####  3.2 
+ ###  4. [Entwicklung](#entwicklung)
+ ### 5. [Ziele](#ziele)
 
 
-### Idee <a name="idee"></a> 
+## Idee <a name="idee"></a> 
 Die Idee für die Spielesammlung war, die Greenfoot und Java- Kenntnisse, die wir uns in unserem ersten Informatikprojekt 
 ["Fischi von Kla"](https://github.com/feta-herrner/Fischi-von-Kla/?target=_blank) angeeignet hatten anzuwenden, um ein größeres, komplexeres Projekt in Greenfoot zu gestalten. Während wir mit "Fischi von Kla" relativ erfolgreich, ein einzelnes, für sich stehendes Spiel programmiert hatten, wollten wir mit "Wap Bap 2 den nächsten Schritt gehen, indem wir eine ganze Sammlung an Spielen schreiben. Begonnen haben wir mit "vier gewinnt" oder "vier in einer Reihe" und der generellen Umgebung zur Spielauswahl- und pausierung, um diese nach und nach um weitere Spiele erweitern zu können...
 
 Später kam uns auch die Idee, unser bereits existierendes Spiel "Fischi von Kla" in leicht verbesserter und erweiterter Form in die Spielesammlung als "Einzelspiel" zu integrieren. Ein Spiel aus einer anderen Greenfoot "Umgebung" in unsere Spielesammlung zu übernehmen stellte sich für uns aber mit steigendem Wissensstand als komplizierter heraus, als gedacht. Wir hätten dafür den Code von Fischi komplett überarbeiten müssen, dazu kam, dass Fischi als unser erstes Java/ Greenfoot- Projekt noch sehr unaufgeräumt und einfach "drauf los" programmiert war, weshalb wir mit der Zeit Abstand von der Idee genommen haben, unseren alten Code "1 on 1" mit einzukopieren. Weil wir aber wissen, wie sehr unsere Fans ihren Fischi lieben, spielen wir mit dem Gedanken, Fischi in optimierter Form und vielleicht auch dem einen oder anderen neuen Feature zurückzubringen und in unsere Spielesammlung zu integrieren. 
 
-### Texturen
+## Texturen
 - arbeit uin gimp, viele texturen komplett alleine erstellt.
-### Code
+## Code
 
 
-#### MyWorld
+### MyWorld
 Die Welt (in unserem Falle default "myWorld") ist in Greenfoot der Grundbaustein, auf dem das Programm aufbaut. In ihr bewegen sich die Objekte und "acten". Jedes Objekt wird im constructor durch die "prepare" methode dort mit einer Koordinate platziert, um dann in Dauerschleife seine "act" methode asuzuführen. Es kann mehrere Welten geben, MyWorld ist in unserem Projekt die Standardwelt, deren constructor durch das klicken von "run" aufgerufen wird.
 
 ```java
@@ -55,73 +55,24 @@ private void prepare() {
 ```
 (prepare-command)
 ```java
-private void prepare() {
-        //Spielauswahl Spielauswahl = new Spielauswahl();
-        //addObject(Spielauswahl,150,250);
-        Spielesammlung () ;
+private void prepare() { 
+        startgame();
     }
 ```
-Den prepare-Befehl, den Greenfoot standardmäßig in allen Welten einbaut, haben wir um die "Spielesammlung" Methode ergänzt, welche mithilfe eines "(for)-loops" mit einem integer und zwei kleinen Berechnungen Objekte setzt, die die jeweiligen Spiele starten, wenn man sie anklickt. Die Objekte gehören zur gleichen Klasse, setzen ihr Bild aber unterschiedlich, je nachdem um welches integer "s" es sich handelt. 
+Den prepare-Befehl, den Greenfoot standardmäßig in allen Welten einbaut, haben wir um die "startgame" Methode ergänzt, welche nun in allen "MyWorlds" grundsätzlich mit dem constructor ausgeführt wird. Die "startgame" befehle sind aber je nach Spiel unterschiedlich, weshalb es uns logisch erschien, diese in die ensprechenden Subklassen auszulagern...
+Mehr dazu unter [Subwelten](#subwelten)
+
+
+#### reset
+Die "reset" Methode wird von einer der ["Spielewelten"](#Spielewelten) aufgerufen, wenn ein Spiel beendet wurde. Sie setzt die aktuelle Welt auf die [Spielauswahl-welt("selection")](#selection) zurück.
 ```java
-private void Spielesammlung ()
+public void reset () //done
     {
-        for(int s=0; s<8; s++) {
-            int reihe = (int)Math.ceil(s/4) ;
-            int spalte = s%4 ;
-            GreenfootImage image = new GreenfootImage (Spiele[s]+".png");
-            Spielauswahl Spielauswahl = new Spielauswahl (image,Spiele[s]) ;
-            addObject (Spielauswahl,200+spalte*200, 250+reihe*200) ;
-            //Spielauswahl.setImage(Spielbilder[s]) ;
-            //Spielauswahl.skalieren () ;
-        }
-    }
-```
-Im Spiel sieht das dann so aus:
-
-<img src="https://user-images.githubusercontent.com/54102146/79452158-fc94bb00-7fe7-11ea-9a28-eb4b3f1da43a.png" width="350">
-
-Wenn man das entsprechende Spiel dann anklickt, berechnet das Objekt über seine Koordinate, um welches Spiel es sich handelt und startet dieses. (siehe [Spielauswahl](#spielauswahl).)
-
-##### startgame <a name=startgame></a>
-bei der "startgame"-method handelt es sich um eine Methode, die je nach "gamenumber", eine integer variable, die vom aufrufenden objekt "mitgeschickt" wird, den [constructor für das ensprechende Spiel](#Spiele) ausführt.
-
-```java
-public void startgame (int gamenumber) 
-    {
-        if(gamenumber == 0)
-        {
-            startvierGewinnt() ;
-        }
-        for (int t=1; t<8; t++)
-        {
-            if (gamenumber == t) 
-            {
-                setBackground(new GreenfootImage("einfachRot.png"));
-                List Spiele = getObjects(null);
-                removeObjects(Spiele);
-                showText("Sorry, Spiel Nummer "+(t+1),500,300) ;
-                showText("wurde noch nicht programmiert... :(",500,320) ;
-                Greenfoot.delay(300) ;
-                showText("",500,300) ;
-                showText("",500,320) ;
-                reset() ;
-            }
-        }
+        Greenfoot.setWorld(new Selection());
     }
 ```
 
-##### reset
-Die "reset" Methode wird von einer der ["Spielewelten"](#Spielewelten) aufgerufen, wenn ein Spiel beendet wurde. Sie löscht alle Objekte in der Welt und setzt denn Hintergrund auf den Standard zurück. Danach wird der prepare Befehl aufgerufen, um eine "frische" Spielesammlung zu öffnen.
-```java
-public Spielauswahl(GreenfootImage image, String name)
-    {
-        Name = name;
-        image.scale(image.getWidth() -530, image.getHeight() -530) ;
-        setImage (image);
-    }
-```
-
-##### pause & resume <a name="pause"></a>
+#### pause & resume <a name="pause"></a>
 pause und resume sind Befehle, die von Objekten der [pause & resume](#p&r) Klassen aufgerufen werden können. Der pause-Befehl fügt dem laufenden Spiel ein "pause" und ein "resume" Objekt hinzu, welche die anderen Objekte überdecken und dafür sorgen, dass mit diesen erst wieder interagiert werden kann, wenn sie entfernt wurden.
 Im Code:
 ```java
@@ -147,22 +98,92 @@ public void resume ()
     }
 ```
 
-#### Spielauswahl <a name="spielauswahl"></a>
-Die Spielauswahl- Objekte befinden sich beim Starten der Spielesammlung in der [MyWorld](#myWorld). Ihre act-Method ist relativ simpel gehalten. Klickt man ein "Spielauswahl" - Objekt an, berechnet es über seine Koordiante, um welches spiel es sich handelt, um dann die [Welt.startgame](#startgame)-methode mit der entsprechenden Nummer aufzurufen.
+#### Subwelten <a name="subwelten"></a>
+Um den MyWorld-Code etwas aufzuräumen (für interessierte ist der "unordentliche" code unter /code(alt) bei github zu finden), haben wir entschlossen, "subwelten" zur MyWorld für die entsprecheden Spiele einzubauen. Diese subwelten erben alle Eigenschaften und Befehle der myWorld, können aber durch eigene, Spielspezifische Methoden ergänzt werden, was sie zum "aufräumen/ trennen" von Befehlen sehr nützlich macht.
+
+##### Selection
+Selection ist die erste und vielleicht wichtigste subwelt, um die wir uns gekümmert haben. Es handelt sich dabei um die "Standardwelt", die aufgerufen wird, wenn man das Spiel öffnet, oder das Spiel zurückgesetzt wird/ beendet wird.
+Ihr Constructor ruft ihre "prepare" Methode auf,
+```java
+public Selection()
+    {
+        super();
+        prepare();
+    }
+```
+welche mithilfe eines "for-loops" die [Spielauswahl](#spielauswahl)-Objekte platziert:
+```java
+private void prepare()
+    {
+        for(int s=0; s<8; s++) {
+            int reihe = (int)Math.ceil(s/4) ;
+            int spalte = s%4 ;  
+            GreenfootImage image = new GreenfootImage (Spiele[s]+".png");
+            Spielauswahl Spielauswahl = new Spielauswahl (image,Spiele[s]) ;
+            addObject (Spielauswahl,200+spalte*200, 250+reihe*200) ;
+            //Spielauswahl.setImage(Spielbilder[s]) ;
+            //Spielauswahl.skalieren () ;
+        }
+    }
+```
+Dabei berechnet "Math.ceil" die reihe für gegebenes int zwischen 0 und 8, also eins oder zwei,
+```java
+int reihe = (int)Math.ceil(s/4) ;
+```
+und 
+"%" die spalte, also 1,2,3 oder 4.
+
+##### FourWins
+Die nächste wichtige Welt ist die FourWins Welt für unser vier gewinnt Spiel. Ihr constructor ist leer.
+
+#####
+
+### Spielauswahl <a name="spielauswahl"></a>
+Die Spielauswahl- Objekte befinden sich beim Starten der Spielesammlung in der [MyWorld](#myWorld). Ihre act-Method ist relativ simpel gehalten. Klickt man ein "Spielauswahl" - Objekt an, berechnet es über seine Koordiante, um welches spiel es sich handelt, um dann die Welt(#subwelten) für das entsprechende Spiel zu setzen.
 ```java
 public void act() 
     {
         
         if(Greenfoot.mouseClicked(this)) 
         {
-            MyWorld Welt = (MyWorld) getWorld();
-             int x = (getX() -200) / 200;
-             int y = (getY() -250) / 200;
-             int nr = (x+4*y) ;
-            Welt.startgame (nr) ;
+            int x = (getX() -200) / 200;
+            int y = (getY() -250) / 200;
+            int nr = (x+4*y);
+
+            MyWorld Welt = null;
+            switch(nr)
+            {
+                case 0:
+                    Welt = new FourWins();
+                    break;
+                case 1:
+                    Welt = new Placeholder();
+                    break;
+                case 2:
+                    Welt = new Placeholder();
+                    break;
+                case 3:
+                    Welt = new Placeholder();
+                    break;
+                case 4:
+                    Welt = new Placeholder();
+                    break;
+                case 5:
+                    Welt = new Placeholder();
+                    break;
+                case 6:
+                    Welt = new Placeholder();
+                    break;
+                case 7:
+                    Welt = new Placeholder();
+                    break;
+                case 8:
+                    Welt = new Placeholder();
+                    break;
+            }
+            Greenfoot.setWorld(Welt);
         }
     } 
-    
 ```
 Der constructor der Spielauswahl beschränkt sich darauf, ihr Bild zu skalieren:
 ```java
@@ -174,7 +195,7 @@ public Spielauswahl(GreenfootImage image, String name)
     }
 ```
 
-#### pause <a name=p&r></a>
+### pause <a name=p&r></a>
 "pause" ist eine relativ simple klasse, die dem Spieler die Möglichkeit geben soll, das laufende Spiel zu pausieren. Ihr constructor ist nur für die skalierung des Bildes zuständig, bei welchem es sich klassisch um eine Art "stop" zeichen handelt. Dieses haben wir selsbt in Gimp erstellt.
 ```java
 public pause () 
@@ -197,12 +218,12 @@ public void act()
             ((MyWorld)getWorld()).pause() ;
         }
 ```
-#### resume
+### resume
 resume verhält sich als klasse sehr ähnlich der "pause" klasse. Wird sie angeklickt, führt sie in der MyWorld die ["resume"](#resume) methode aus.
 
-#### stop
+### stop
 
-### Entwicklung
+## Entwicklung
 Unser Spielesammlung "Wap Bap" hat in ihrem knappen halben Jahr, die sie nun in der Entwicklungen viele Stadien durchlaufen, von denen wir in diesem alpha-release noch Fragmente auskommentiert im Code gelassen haben, welche bei der Endveröffentlichung entfernt werden werden. So wurde ursprünglich beispielsweise jedes Feld im "vier gewinnt"-Spiel als einzelne Subklasse generiert, was sehr viel Spaghetti-code nach sich zog. Das besondere an diesem Projekt war, dass wir als Entwickler auf der Reise sehr viel von, aber auch um und über unser Spiel, sowie Greenfoot als Programmierumgebung gelernt haben, was dazu geführt hat, dass wir unserem Code immer wieder optimiert, verändert und teilweise komplett "from scratch" neu geschrieben haben. Das führt dazu, dass das Spiel in dieser Alpha nur noch wenig mit dem ersten spielbaren Projekt zu tun hat, was uns aber auch stolz macht, weil es uns zeigt, dass wir an diesem Projekt als "Programmierer" wirklich gewachsen sind und dazu gelernt haben.
 
 Hier ein Beispiel, wie unser "Felderbauen" aussah, bevor wir es optimiert haben:
@@ -212,8 +233,8 @@ optimiert sah das ganze dann so aus, mit den gleichen Eigenschaften im Spiel sel
 
  <img src="https://user-images.githubusercontent.com/54102146/79449223-21d2fa80-7fe3-11ea-946b-65d36c7c0184.png" width="300">
 
-### Ziele
+## Ziele
 - weitere Spiele hobbymäßig hinzufügen.
 - port auf eine andere "Plattform"/ einen anderen compiler?
 
-####
+###
