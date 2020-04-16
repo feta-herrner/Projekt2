@@ -52,10 +52,10 @@ Im Spiel sieht das dann so aus:
 
 Wenn man das entsprechende Spiel dann anklickt, berechnet das Objekt über seine Koordinate, um welches Spiel es sich handelt und startet dieses. (siehe [Spielauswahl](#spielauswahl).
 
-startgame (#startgame)
+startgame <a name=spielauswahl></a>
 
 
-#### Spielauswahl (#Spielauswahl).
+#### Spielauswahl <a name="spielauswahl"></a>
 Die Spielauswahl- Objekte befinden sich beim Starten der Spielesammlung in der [MyWorld](#myWorld). Ihre act-Method ist relativ simpel gehalten. Klickt man ein "Spielauswahl" - Objekt an, berechnet es über seine Koordiante, um welches spiel es sich handelt, um dann die [Welt.startgame](#startgame)-methode mit der entsprechenden Nummer aufzurufen.
 
 <img src="https://user-images.githubusercontent.com/54102146/79453170-96a93300-7fe9-11ea-8b42-ac19a8d2e242.png" width="300">
