@@ -52,7 +52,7 @@ Im Spiel sieht das dann so aus:
 
 Wenn man das entsprechende Spiel dann anklickt, berechnet das Objekt über seine Koordinate, um welches Spiel es sich handelt und startet dieses. (siehe [Spielauswahl](#spielauswahl).
 
-startgame <a name=spielauswahl></a>
+startgame <a name=startgame></a>
 
 
 #### Spielauswahl <a name="spielauswahl"></a>
