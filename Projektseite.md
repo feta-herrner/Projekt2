@@ -42,7 +42,13 @@ Die Welt (in unserem Falle default "myWorld") ist in Greenfoot der Grundbaustein
 <img src="https://user-images.githubusercontent.com/54102146/79450852-d241fe00-7fe5-11ea-8f4c-152c3f898fd4.png" width="200">
 (prepare-command)
 
-Den prepare-Befehl, den Greenfoot standardmäßig in allen Welten einbaut, haben wir um die "Spielesammlung" methode ergänzt, welche mithilfe 
+Den prepare-Befehl, den Greenfoot standardmäßig in allen Welten einbaut, haben wir um die "Spielesammlung" Methode ergänzt, welche mithilfe eines "(for)-loops" mit einem integer und zwei kleinen Berechnungen Objekte setzt, die die jeweiligen Spiele starten, wenn man sie anklickt.
+
+<img src="https://user-images.githubusercontent.com/54102146/79452024-c35c4b00-7fe7-11ea-94cd-465ac6c04110.png" width="200">
+
+Im Spiel sieht das dann so aus:
+
+<img src="https://user-images.githubusercontent.com/54102146/79452158-fc94bb00-7fe7-11ea-9a28-eb4b3f1da43a.png" width="200">
 
 ####
 
