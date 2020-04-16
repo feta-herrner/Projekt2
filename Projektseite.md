@@ -36,19 +36,19 @@ Später kam uns auch die Idee, unser bereits existierendes Spiel "Fischi von Kla
 #### MyWorld
 Die Welt (in unserem Falle default "myWorld") ist in Greenfoot der Grundbaustein, auf dem das Programm aufbaut. In ihr bewegen sich die Objekte und "acten". Jedes Objekt wird im constructor durch die "prepare" methode dort mit einer Koordinate platziert, um dann in Dauerschleife seine "act" methode asuzuführen. Es kann mehrere Welten geben, MyWorld ist in unserem Projekt die Standardwelt, deren constructor durch das klicken von "run" aufgerufen wird.
 
-<img src="https://user-images.githubusercontent.com/54102146/79450788-b0487b80-7fe5-11ea-9abe-d85f2f90693d.png" width="300">
+<img src="https://user-images.githubusercontent.com/54102146/79450788-b0487b80-7fe5-11ea-9abe-d85f2f90693d.png" width="350">
 (constructor)
 
-<img src="https://user-images.githubusercontent.com/54102146/79450852-d241fe00-7fe5-11ea-8f4c-152c3f898fd4.png" width="300">
+<img src="https://user-images.githubusercontent.com/54102146/79450852-d241fe00-7fe5-11ea-8f4c-152c3f898fd4.png" width="350">
 (prepare-command)
 
 Den prepare-Befehl, den Greenfoot standardmäßig in allen Welten einbaut, haben wir um die "Spielesammlung" Methode ergänzt, welche mithilfe eines "(for)-loops" mit einem integer und zwei kleinen Berechnungen Objekte setzt, die die jeweiligen Spiele starten, wenn man sie anklickt.
 
-<img src="https://user-images.githubusercontent.com/54102146/79452024-c35c4b00-7fe7-11ea-94cd-465ac6c04110.png" width="300">
+<img src="https://user-images.githubusercontent.com/54102146/79452024-c35c4b00-7fe7-11ea-94cd-465ac6c04110.png" width="350">
 
 Im Spiel sieht das dann so aus:
 
-<img src="https://user-images.githubusercontent.com/54102146/79452158-fc94bb00-7fe7-11ea-9a28-eb4b3f1da43a.png" width="300">
+<img src="https://user-images.githubusercontent.com/54102146/79452158-fc94bb00-7fe7-11ea-9a28-eb4b3f1da43a.png" width="350">
 
 ####
 
