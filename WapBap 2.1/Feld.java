@@ -55,7 +55,7 @@ public class Feld extends Actor
      }
     
     public void spielen () {
-        MyWorld Welt = (MyWorld) getWorld();
+        FourWins Welt = (FourWins) getWorld();
         int x = (getX() -350) / 50;
         int y = (getY() -150) / 50;
         if (Greenfoot.mouseClicked(this)) 
@@ -85,7 +85,7 @@ public class Feld extends Actor
     
     private void cheats (int xy)
     {
-            MyWorld Welt = (MyWorld) getWorld();
+            FourWins Welt = (FourWins) getWorld();
             //if (Greenfoot.isKeyDown(""))
             String key = Greenfoot.getKey();
             if (key != null)

@@ -39,11 +39,42 @@ public class Spielauswahl extends Spiele
         
         if(Greenfoot.mouseClicked(this)) 
         {
-            MyWorld Welt = (MyWorld) getWorld();
-             int x = (getX() -200) / 200;
-             int y = (getY() -250) / 200;
-             int nr = (x+4*y) ;
-            Welt.startgame (nr) ;
+            int x = (getX() -200) / 200;
+            int y = (getY() -250) / 200;
+            int nr = (x+4*y);
+
+            MyWorld Welt = null;
+            switch(nr)
+            {
+                case 0:
+                    Welt = new FourWins();
+                    break;
+                case 1:
+                    Welt = new Placeholder();
+                    break;
+                case 2:
+                    Welt = new Placeholder();
+                    break;
+                case 3:
+                    Welt = new Placeholder();
+                    break;
+                case 4:
+                    Welt = new Placeholder();
+                    break;
+                case 5:
+                    Welt = new Placeholder();
+                    break;
+                case 6:
+                    Welt = new Placeholder();
+                    break;
+                case 7:
+                    Welt = new Placeholder();
+                    break;
+                case 8:
+                    Welt = new Placeholder();
+                    break;
+            }
+            Greenfoot.setWorld(Welt);
         }
     } 
 }
